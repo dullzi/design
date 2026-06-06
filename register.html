@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar | Club of 1986</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            black: '#F8F9FA',
+            white: '#111827',
+            cream: '#E5E7EB',
+            accent: '#0A6BAA',
+            accent2: '#E63C2F',
+            dark2: '#F3F4F6',
+            gray: '#6B7280',
+            card: '#FFFFFF',
+            border: '#E5E7EB'
+          }
+        },
+        fontFamily: {
+          'bebas': ['"Bebas Neue"', 'sans-serif'],
+          'barlow': ['"Barlow"', 'sans-serif'],
+          'barlow-c': ['"Barlow Condensed"', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-white text-brand-white font-barlow min-h-screen">
+
+<div class="flex min-h-screen">
+  
+  <!-- Left Panel: Image Showcase -->
+  <div class="hidden lg:flex lg:w-1/2 relative bg-black items-center justify-center overflow-hidden">
+    <!-- Changed image for register page -->
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1200')] bg-cover bg-center opacity-50 mix-blend-luminosity scale-105 transition-transform duration-[10s] hover:scale-100"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-80"></div>
+    <div class="relative z-10 p-12 text-center max-w-lg mt-20">
+      <h2 class="font-bebas text-7xl text-white mb-6 tracking-wide drop-shadow-lg">START YOUR <br><span class="text-brand-accent brightness-150">JOURNEY.</span></h2>
+      <p class="text-white/80 text-lg font-barlow leading-relaxed">
+        Jadilah bagian dari komunitas kami. Nikmati diskon eksklusif, produk terbaru, dan penawaran spesial hanya untuk member.
+      </p>
+    </div>
+  </div>
+
+  <!-- Right Panel: Form -->
+  <div class="w-full lg:w-1/2 flex flex-col justify-center px-6 sm:px-12 md:px-20 py-12 relative bg-white overflow-y-auto">
+    
+    <a href="index.html" class="absolute top-8 left-6 sm:left-12 md:left-20 flex items-center gap-2 text-sm font-barlow-c font-bold uppercase tracking-widest text-brand-gray hover:text-brand-accent transition-colors">
+      <i class="ti ti-arrow-left text-lg"></i> Kembali
+    </a>
+
+    <div class="max-w-md w-full mx-auto my-auto mt-16 md:mt-auto">
+      <!-- Header -->
+      <h2 class="font-barlow-c text-4xl font-bold uppercase tracking-wide mb-3">Daftar Akun Baru</h2>
+      <p class="text-brand-gray mb-8 text-base">Isi detail Anda di bawah ini untuk bergabung dengan Club of 1986.</p>
+
+      <!-- Form -->
+      <form action="#" method="POST" class="space-y-5">
+        
+        <div>
+          <label for="name" class="block font-barlow-c font-bold text-sm tracking-widest uppercase text-brand-white mb-2">Nama Lengkap</label>
+          <div class="relative">
+            <i class="ti ti-user absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray text-lg"></i>
+            <input type="text" id="name" class="w-full bg-[#F3F4F6] border-none rounded-lg px-4 py-3.5 pl-11 font-barlow text-sm focus:ring-2 focus:ring-brand-accent focus:bg-white transition-all outline-none" placeholder="John Doe" required>
+          </div>
+        </div>
+
+        <div>
+          <label for="email" class="block font-barlow-c font-bold text-sm tracking-widest uppercase text-brand-white mb-2">Email Address</label>
+          <div class="relative">
+            <i class="ti ti-mail absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray text-lg"></i>
+            <input type="email" id="email" class="w-full bg-[#F3F4F6] border-none rounded-lg px-4 py-3.5 pl-11 font-barlow text-sm focus:ring-2 focus:ring-brand-accent focus:bg-white transition-all outline-none" placeholder="nama@email.com" required>
+          </div>
+        </div>
+
+        <div>
+          <label for="password" class="block font-barlow-c font-bold text-sm tracking-widest uppercase text-brand-white mb-2">Password</label>
+          <div class="relative">
+            <i class="ti ti-lock absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray text-lg"></i>
+            <input type="password" id="password" class="w-full bg-[#F3F4F6] border-none rounded-lg px-4 py-3.5 pl-11 font-barlow text-sm focus:ring-2 focus:ring-brand-accent focus:bg-white transition-all outline-none" placeholder="Minimal 8 karakter" required>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <label class="flex items-start gap-3 cursor-pointer group">
+            <input type="checkbox" required class="mt-1 w-4 h-4 rounded border-brand-border text-brand-accent focus:ring-brand-accent transition-all">
+            <span class="font-barlow text-sm text-brand-gray leading-tight">Saya setuju dengan <a href="login.html" class="text-brand-accent font-semibold hover:underline">Syarat & Ketentuan</a> serta <a href="#" class="text-brand-accent font-semibold hover:underline">Kebijakan Privasi</a> yang berlaku.</span>
+          </label>
+        </div>
+
+        <button type="submit" class="w-full bg-brand-white hover:bg-black text-white font-barlow-c font-bold text-sm tracking-widest uppercase py-4 rounded-lg transition-all transform hover:-translate-y-1 mt-4">
+          Buat Akun Sekarang
+        </button>
+      </form>
+
+      <!-- Divider -->
+      <div class="mt-8 mb-6 flex items-center gap-4">
+        <div class="flex-1 h-px bg-brand-border"></div>
+        <span class="font-barlow text-xs text-brand-gray uppercase tracking-widest">Atau daftar dengan</span>
+        <div class="flex-1 h-px bg-brand-border"></div>
+      </div>
+
+      <!-- Social Login -->
+      <div class="grid grid-cols-2 gap-4">
+        <button class="flex items-center justify-center gap-2 border border-brand-border rounded-lg py-3 hover:bg-[#F3F4F6] transition-colors font-barlow font-semibold text-sm">
+          <i class="ti ti-brand-google text-lg text-red-500"></i> Google
+        </button>
+        <button class="flex items-center justify-center gap-2 border border-brand-border rounded-lg py-3 hover:bg-[#F3F4F6] transition-colors font-barlow font-semibold text-sm">
+          <i class="ti ti-brand-facebook text-lg text-blue-600"></i> Facebook
+        </button>
+      </div>
+
+      <!-- Sign In Link -->
+      <p class="mt-10 text-center font-barlow text-brand-gray">
+        Sudah punya akun? 
+        <a href="login.html" class="font-semibold text-brand-accent hover:underline">Masuk di sini</a>
+      </p>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

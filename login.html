@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Club of 1986</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            black: '#F8F9FA',
+            white: '#111827',
+            cream: '#E5E7EB',
+            accent: '#0A6BAA',
+            accent2: '#E63C2F',
+            dark2: '#F3F4F6',
+            gray: '#6B7280',
+            card: '#FFFFFF',
+            border: '#E5E7EB'
+          }
+        },
+        fontFamily: {
+          'bebas': ['"Bebas Neue"', 'sans-serif'],
+          'barlow': ['"Barlow"', 'sans-serif'],
+          'barlow-c': ['"Barlow Condensed"', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-white text-brand-white font-barlow min-h-screen">
+
+<div class="flex min-h-screen">
+  
+  <!-- Left Panel: Image Showcase -->
+  <div class="hidden lg:flex lg:w-1/2 relative bg-black items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200')] bg-cover bg-center opacity-40 mix-blend-luminosity scale-105 transition-transform duration-[10s] hover:scale-100"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0A6BAA]/80 to-transparent mix-blend-multiply"></div>
+    <div class="relative z-10 p-12 text-center max-w-lg mt-20">
+      <h2 class="font-bebas text-7xl text-white mb-6 tracking-wide drop-shadow-lg">JOIN THE <br><span class="text-brand-accent brightness-150">CLUB.</span></h2>
+      <p class="text-white/80 text-lg font-barlow leading-relaxed">
+        Lebih dari sekadar fashion. Ini adalah gaya hidup, identitas, dan ekspresi bebas tanpa batas. Mulai langkahmu di sini.
+      </p>
+    </div>
+  </div>
+
+  <!-- Right Panel: Form -->
+  <div class="w-full lg:w-1/2 flex flex-col justify-center px-6 sm:px-12 md:px-20 py-12 relative bg-white">
+    
+    <a href="index.html" class="absolute top-8 left-6 sm:left-12 md:left-20 flex items-center gap-2 text-sm font-barlow-c font-bold uppercase tracking-widest text-brand-gray hover:text-brand-accent transition-colors">
+      <i class="ti ti-arrow-left text-lg"></i> Kembali
+    </a>
+
+    <div class="max-w-md w-full mx-auto">
+      <!-- Logo -->
+      <div class="mb-10 text-center lg:text-left">
+        <h1 class="font-bebas text-5xl tracking-wide">CLUB<span class="text-brand-accent">.</span>OF<span class="text-brand-accent">.</span>1986</h1>
+      </div>
+
+      <!-- Header -->
+      <h2 class="font-barlow-c text-4xl font-bold uppercase tracking-wide mb-3">Masuk ke Akun</h2>
+      <p class="text-brand-gray mb-10 text-base">Selamat datang kembali! Silakan masukkan detail login Anda untuk melanjutkan.</p>
+
+      <!-- Form -->
+      <form action="#" method="POST" class="space-y-6">
+        <div>
+          <label for="email" class="block font-barlow-c font-bold text-sm tracking-widest uppercase text-brand-white mb-2">Email Address</label>
+          <div class="relative">
+            <i class="ti ti-mail absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray text-lg"></i>
+            <input type="email" id="email" class="w-full bg-[#F3F4F6] border-none rounded-lg px-4 py-3.5 pl-11 font-barlow text-sm focus:ring-2 focus:ring-brand-accent focus:bg-white transition-all outline-none" placeholder="nama@email.com" required>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <label for="password" class="block font-barlow-c font-bold text-sm tracking-widest uppercase text-brand-white">Password</label>
+            <a href="login.html" class="text-sm font-barlow font-semibold text-brand-accent hover:underline">Lupa Password?</a>
+          </div>
+          <div class="relative">
+            <i class="ti ti-lock absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray text-lg"></i>
+            <input type="password" id="password" class="w-full bg-[#F3F4F6] border-none rounded-lg px-4 py-3.5 pl-11 font-barlow text-sm focus:ring-2 focus:ring-brand-accent focus:bg-white transition-all outline-none" placeholder="••••••••" required>
+            <i class="ti ti-eye absolute right-4 top-1/2 -translate-y-1/2 text-brand-gray cursor-pointer hover:text-brand-accent transition-colors"></i>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full bg-brand-accent hover:bg-[#085d96] text-white font-barlow-c font-bold text-sm tracking-widest uppercase py-4 rounded-lg transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-accent/30 mt-4">
+          Masuk Sekarang
+        </button>
+      </form>
+
+      <!-- Divider -->
+      <div class="mt-8 mb-6 flex items-center gap-4">
+        <div class="flex-1 h-px bg-brand-border"></div>
+        <span class="font-barlow text-xs text-brand-gray uppercase tracking-widest">Atau masuk dengan</span>
+        <div class="flex-1 h-px bg-brand-border"></div>
+      </div>
+
+      <!-- Social Login -->
+      <div class="grid grid-cols-2 gap-4">
+        <button class="flex items-center justify-center gap-2 border border-brand-border rounded-lg py-3 hover:bg-[#F3F4F6] transition-colors font-barlow font-semibold text-sm">
+          <i class="ti ti-brand-google text-lg text-red-500"></i> Google
+        </button>
+        <button class="flex items-center justify-center gap-2 border border-brand-border rounded-lg py-3 hover:bg-[#F3F4F6] transition-colors font-barlow font-semibold text-sm">
+          <i class="ti ti-brand-facebook text-lg text-blue-600"></i> Facebook
+        </button>
+      </div>
+
+      <!-- Sign Up Link -->
+      <p class="mt-10 text-center font-barlow text-brand-gray">
+        Belum punya akun? 
+        <a href="register.html" class="font-semibold text-brand-accent hover:underline">Daftar di sini</a>
+      </p>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
