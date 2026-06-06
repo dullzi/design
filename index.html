@@ -1922,7 +1922,10 @@
       background: #F3F4F6
     }
 
-    .look-card:nth-child(1) {
+    
+.look-card { min-height: 250px; }
+@media(min-width:768px) {
+.look-card:nth-child(1) {
       grid-column: 1;
       grid-row: 1/3;
       min-height: 560px
@@ -1942,6 +1945,8 @@
       grid-column: 2/4;
       min-height: 275px
     }
+}
+
 
     .look-bg {
       position: absolute;
