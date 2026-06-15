@@ -97,7 +97,7 @@
   <section class="w-full mt-8 md:mt-4 reveal">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
       <div class="relative h-[600px] md:h-[800px] overflow-hidden md:col-span-2">
-        <img src="images/banner/section gambar 1 bagian kiri -index.webp" alt="Models" loading="lazy" class="w-full h-full object-cover">
+        <img src="images/banner/section gambar 1 bagian kiri -index.webp" alt="Models" fetchpriority="high" class="w-full h-full object-cover">
       </div>
       
       <div class="relative h-[600px] md:h-[800px] flex flex-col justify-end bg-cover bg-center p-8 md:p-12 overflow-hidden md:col-span-1" style="background-image: url('images/banner/section gambar 1 bagian kanan -index.webp');">
@@ -178,8 +178,9 @@
             { name: "Beanie Hat", price: "Rp. 90.000,-", img: "images/product/tas 2 -allproduct.webp" }
           ];
 
+          let htmlString = "";
           products.forEach((prod) => {
-            document.write(`
+            htmlString += `
               <div onclick="window.location.href='product-detail.html'" class="product-card border border-gray-200 rounded-lg overflow-hidden cursor-pointer w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)] snap-start flex-shrink-0 bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                 <div class="h-[200px] sm:h-[250px] flex items-center justify-center bg-white">
                   <img src="${prod.img}" alt="${prod.name}" loading="lazy" class="w-full h-full object-contain mix-blend-multiply hover:scale-110 transition-transform duration-500">
@@ -189,8 +190,9 @@
                   <div class="text-[11px] text-brand-blue mt-1 font-medium">${prod.price}</div>
                 </div>
               </div>
-            `);
+            `;
           });
+          document.currentScript.insertAdjacentHTML('beforebegin', htmlString);
         </script>
       </div>
 

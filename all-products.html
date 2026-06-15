@@ -3034,6 +3034,7 @@
               const end = start + itemsPerPage;
               const currentProducts = productsAll.slice(start, end);
 
+              let htmlString = "";
               currentProducts.forEach(p => {
                 let priceHtml = p.oldPrice
                   ? `<div class="text-[11px] text-gray-400 line-through">${p.price}</div>
@@ -3041,7 +3042,7 @@
                   : `<div class="text-[13px] text-[#0A6BAA] font-bold mt-1">${p.price}</div>`;
 
                 // fixed height for all images, object-contain prevents cut-offs
-                container.innerHTML += `
+                htmlString += `
               <div onclick="window.location.href='product-detail.html'" class="border border-gray-300 rounded-lg overflow-hidden bg-white flex flex-col hover:shadow-lg transition-shadow cursor-pointer">
                 <div class="h-[160px] sm:h-[250px] flex items-center justify-center ${p.bg}">
                   <img src="${p.img}" alt="${p.name}" loading="lazy" class="w-full h-full object-contain mix-blend-multiply drop-shadow-sm">
@@ -3058,6 +3059,7 @@
               </div>
             `;
               });
+              container.innerHTML = htmlString;
 
               // Update Pagination UI
               document.getElementById('page-info').innerHTML = `Menampilkan halaman <span class="font-bold text-gray-900">${currentPage}</span> dari <span class="font-bold text-gray-900">${totalPages}</span>`;
