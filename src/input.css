@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    background-color: #ffffff;
+    color: #333333;
+  }
+}
+
+@layer components {
+  /* Custom hover untuk produk */
+  .product-card {
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .product-card:hover {
+    border-color: #20658B;
+    transform: translateY(-5px);
+  }
+
+  /* Animasi scroll ringan */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hide scrollbar for carousel */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

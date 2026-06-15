@@ -8,61 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            'sans': ['Inter', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              blue: '#20658B',   /* Warna biru utama */
-              dark: '#015581',   /* Warna biru footer & navbar scroll */
-              text: '#333333'
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    body {
-      background-color: #ffffff;
-      color: #333333;
-    }
-
-    /* Custom hover untuk produk */
-    .product-card {
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    .product-card:hover {
-      border-color: #20658B;
-      transform: translateY(-5px);
-    }
-
-    /* Animasi scroll ringan */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Hide scrollbar for carousel */
-    .scrollbar-hide::-webkit-scrollbar {
-      display: none;
-    }
-    .scrollbar-hide {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-  </style>
+  <link rel="stylesheet" href="dist/output.css">
 </head>
 <body class="antialiased relative">
 
@@ -78,7 +24,7 @@
         <i class="ti ti-brand-abstract text-3xl font-bold"></i>
         <span class="ml-2 font-bold text-lg font-sans">CLUB.OF.1986</span>
       </a>
-      <button onclick="toggleMobileNav()"
+      <button aria-label="Toggle Mobile Menu" onclick="toggleMobileNav()"
         class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50 border border-gray-200 text-gray-500 hover:text-black hover:bg-gray-100">
         <i class="ti ti-x text-lg"></i>
       </button>
@@ -108,7 +54,7 @@
   <nav id="navbar" class="fixed top-0 w-full z-50 py-5 px-6 md:px-12 flex justify-between items-center text-white bg-transparent transition-all duration-300">
     <div class="flex items-center space-x-4 md:space-x-8">
       <!-- Hamburger Menu Button (Mobile Only) -->
-      <button onclick="toggleMobileNav()" class="md:hidden hover:text-gray-300 transition-colors">
+      <button aria-label="Toggle Mobile Menu" onclick="toggleMobileNav()" class="md:hidden hover:text-gray-300 transition-colors">
         <i class="ti ti-menu-2 text-2xl"></i>
       </button>
 
@@ -125,9 +71,9 @@
     </div>
 
     <div class="flex items-center space-x-5">
-      <button class="hover:text-gray-300 transition-colors"><i class="ti ti-search text-xl"></i></button>
-      <button onclick="window.location.href='wishlist.html'" class="hover:text-gray-300 transition-colors"><i class="ti ti-user text-xl"></i></button>
-      <button onclick="window.location.href='cart.html'" class="relative hover:text-gray-300 transition-colors">
+      <button aria-label="Search" class="hover:text-gray-300 transition-colors"><i class="ti ti-search text-xl"></i></button>
+      <button aria-label="Wishlist" onclick="window.location.href='wishlist.html'" class="hover:text-gray-300 transition-colors"><i class="ti ti-user text-xl"></i></button>
+      <button aria-label="Cart" onclick="window.location.href='cart.html'" class="relative hover:text-gray-300 transition-colors">
         <i class="ti ti-shopping-cart text-xl"></i>
         <span class="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
       </button>
@@ -151,7 +97,7 @@
   <section class="w-full mt-8 md:mt-4 reveal">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
       <div class="relative h-[600px] md:h-[800px] overflow-hidden md:col-span-2">
-        <img src="images/banner/section gambar 1 bagian kiri -index.webp" alt="Models" class="w-full h-full object-cover">
+        <img src="images/banner/section gambar 1 bagian kiri -index.webp" alt="Models" loading="lazy" class="w-full h-full object-cover">
       </div>
       
       <div class="relative h-[600px] md:h-[800px] flex flex-col justify-end bg-cover bg-center p-8 md:p-12 overflow-hidden md:col-span-1" style="background-image: url('images/banner/section gambar 1 bagian kanan -index.webp');">
@@ -159,9 +105,9 @@
         
         <div class="relative z-10 w-full h-full flex flex-col justify-between">
           <div class="flex-1 flex items-center justify-center">
-            <h2 class="text-white text-5xl md:text-7xl font-serif italic tracking-wide text-center drop-shadow-lg" style="font-family: 'Times New Roman', Times, serif;">
+            <h1 class="text-white text-5xl md:text-7xl font-serif italic tracking-wide text-center drop-shadow-lg" style="font-family: 'Times New Roman', Times, serif;">
               Legacy <br> <span class="text-4xl md:text-6xl">in</span> Motion
-            </h2>
+            </h1>
           </div>
           
           <div class="text-white text-sm md:text-base leading-relaxed font-light text-justify px-4 md:px-8 pb-4">
@@ -195,14 +141,14 @@
   <section class="w-full pb-16 reveal">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
       <div class="relative h-[500px] md:h-[700px] group overflow-hidden bg-black">
-        <img src="images/banner/section gambar 2 bagian kiri -index.webp" alt="Best Seller Jacket" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+        <img src="images/banner/section gambar 2 bagian kiri -index.webp" alt="Best Seller Jacket" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
         <div class="absolute bottom-8 right-8 text-white text-xl font-semibold tracking-widest drop-shadow-md">
           Best Seller
         </div>
       </div>
       
       <div class="relative h-[500px] md:h-[700px] group overflow-hidden bg-black">
-        <img src="images/banner/section gambar 2 bagian kanan -index.webp" alt="Sale Items" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+        <img src="images/banner/section gambar 2 bagian kanan -index.webp" alt="Sale Items" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
         <div class="absolute bottom-8 left-8 text-white text-xl font-semibold tracking-widest drop-shadow-md">
           Sale
         </div>
@@ -215,7 +161,7 @@
     <h2 class="text-brand-blue font-semibold text-base mb-8 uppercase tracking-wider">Featured Product</h2>
     
     <div class="relative group">
-      <button id="scrollLeftBtn" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-5 bg-white p-3 rounded-full shadow-md z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 text-brand-dark hidden md:block">
+      <button aria-label="Scroll Left" id="scrollLeftBtn" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-5 bg-white p-3 rounded-full shadow-md z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 text-brand-dark hidden md:block">
         <i class="ti ti-chevron-left text-xl"></i>
       </button>
 
@@ -236,7 +182,7 @@
             document.write(`
               <div onclick="window.location.href='product-detail.html'" class="product-card border border-gray-200 rounded-lg overflow-hidden cursor-pointer w-[calc(50%-0.5rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1.2rem)] snap-start flex-shrink-0 bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
                 <div class="h-[200px] sm:h-[250px] flex items-center justify-center bg-white">
-                  <img src="${prod.img}" alt="${prod.name}" class="w-full h-full object-contain mix-blend-multiply hover:scale-110 transition-transform duration-500">
+                  <img src="${prod.img}" alt="${prod.name}" loading="lazy" class="w-full h-full object-contain mix-blend-multiply hover:scale-110 transition-transform duration-500">
                 </div>
                 <div class="p-3 flex flex-col">
                   <div class="text-xs font-bold text-brand-blue">${prod.name}</div>
@@ -248,7 +194,7 @@
         </script>
       </div>
 
-      <button id="scrollRightBtn" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-5 bg-white p-3 rounded-full shadow-md z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 text-brand-dark hidden md:block">
+      <button aria-label="Scroll Right" id="scrollRightBtn" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-5 bg-white p-3 rounded-full shadow-md z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 text-brand-dark hidden md:block">
         <i class="ti ti-chevron-right text-xl"></i>
       </button>
     </div>
@@ -264,7 +210,7 @@
   </section>
 
   <div class="fixed bottom-6 right-6 z-50">
-    <button class="w-14 h-14 bg-[#5698B9] rounded-xl text-white flex items-center justify-center shadow-xl hover:bg-[#4582A0] transition-colors border-2 border-white transform hover:scale-105">
+    <button aria-label="Chat" class="w-14 h-14 bg-[#5698B9] rounded-xl text-white flex items-center justify-center shadow-xl hover:bg-[#4582A0] transition-colors border-2 border-white transform hover:scale-105">
       <i class="ti ti-message-circle-2 text-3xl"></i>
     </button>
   </div>
@@ -277,10 +223,10 @@
     </div>
 
     <div class="flex justify-center items-center space-x-6 mb-10 text-2xl">
-      <a href="#" class="hover:text-blue-300 transition-colors hover:scale-110 transform"><i class="ti ti-brand-instagram"></i></a>
-      <a href="#" class="hover:text-blue-300 transition-colors hover:scale-110 transform"><i class="ti ti-brand-tiktok"></i></a>
-      <a href="#" class="hover:text-blue-300 transition-colors hover:scale-110 transform"><i class="ti ti-brand-x"></i></a>
-      <a href="#" class="hover:text-blue-300 transition-colors hover:scale-110 transform"><i class="ti ti-brand-youtube"></i></a>
+      <a href="#" aria-label="Instagram" class="hover:text-blue-300 transition-colors hover:scale-110 transform"><i class="ti ti-brand-instagram"></i></a>
+      <a href="#" aria-label="TikTok" class="hover:text-blue-300 transition-colors hover:scale-110 transform"><i class="ti ti-brand-tiktok"></i></a>
+      <a href="#" aria-label="Twitter X" class="hover:text-blue-300 transition-colors hover:scale-110 transform"><i class="ti ti-brand-x"></i></a>
+      <a href="#" aria-label="YouTube" class="hover:text-blue-300 transition-colors hover:scale-110 transform"><i class="ti ti-brand-youtube"></i></a>
     </div>
 
     <div class="mb-6">

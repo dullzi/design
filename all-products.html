@@ -1,57 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Products - Authentic Dailywear</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    function toggleMobileNav() {
-      const sidebar = document.getElementById("nav-sidebar");
-      const overlay = document.getElementById("mobile-nav-overlay");
-      sidebar.classList.toggle("-translate-x-full");
-      overlay.classList.toggle("hidden");
-      document.body.style.overflow = sidebar.classList.contains("-translate-x-full") ? "hidden" : "";
-    }
-
-    function toggleMobileFilter() {
-      const sidebar = document.getElementById("filter-sidebar");
-      const overlay = document.getElementById("mobile-filter-overlay");
-      sidebar.classList.toggle("-translate-x-full");
-      overlay.classList.toggle("hidden");
-      // Prevent body scroll when filter is open
-      document.body.style.overflow = sidebar.classList.contains("-translate-x-full") ? "" : "hidden";
-    }
-
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              black: '#F8F9FA',
-              white: '#111827',
-              cream: '#E5E7EB',
-              accent: '#0A6BAA',
-              accent2: '#E63C2F',
-              dark2: '#F3F4F6',
-              gray: '#6B7280',
-              card: '#FFFFFF',
-              border: '#E5E7EB'
-            }
-          },
-          fontFamily: {
-            'bebas': ['"Bebas Neue"', 'sans-serif'],
-            'barlow': ['"Barlow"', 'sans-serif'],
-            'barlow-c': ['"Barlow Condensed"', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="dist/output.css">
   <style>
     * {
       margin: 0;
@@ -2829,12 +2787,12 @@
     </div>
 
     <div class="flex items-center space-x-5">
-      <button class="hover:text-gray-300 transition-colors"><i class="ti ti-search text-xl"></i></button>
-      <button onclick="window.location.href='wishlist.html'" class="hover:text-gray-300 transition-colors"><i class="ti ti-user text-xl"></i></button>
-      <button onclick="window.location.href='cart.html'" class="relative hover:text-gray-300 transition-colors">
+      <button aria-label="Search" class="hover:text-gray-300 transition-colors"><i class="ti ti-search text-xl"></i></button>
+      <button aria-label="Wishlist" onclick="window.location.href='wishlist.html'" class="hover:text-gray-300 transition-colors"><i class="ti ti-user text-xl"></i></button>
+      <button aria-label="Cart" onclick="window.location.href='cart.html'" class="relative hover:text-gray-300 transition-colors">
         <i class="ti ti-shopping-cart text-xl"></i>
         <span
-          class="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
+          class="absolute -top-2 -right-2 bg-[#E63C2F] text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">3</span>
       </button>
     </div>
   </nav>
@@ -2890,7 +2848,7 @@
             <div class="p-4 border-b border-[#E5E7EB]">
               <div class="relative">
                 <i class="ti ti-search absolute left-3 top-1/2 -translate-y-1/2 text-[#0A6BAA] text-lg"></i>
-                <input type="text" placeholder="Search"
+                <input type="text" placeholder="Search" aria-label="Search products"
                   class="w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-md text-sm text-gray-700 focus:outline-none focus:border-[#0A6BAA] focus:ring-1 focus:ring-[#0A6BAA] transition-shadow">
               </div>
             </div>
@@ -3084,16 +3042,16 @@
 
                 // fixed height for all images, object-contain prevents cut-offs
                 container.innerHTML += `
-              <div class="border border-gray-300 rounded-lg overflow-hidden bg-white flex flex-col hover:shadow-lg transition-shadow">
+              <div onclick="window.location.href='product-detail.html'" class="border border-gray-300 rounded-lg overflow-hidden bg-white flex flex-col hover:shadow-lg transition-shadow cursor-pointer">
                 <div class="h-[160px] sm:h-[250px] flex items-center justify-center ${p.bg}">
-                  <img src="${p.img}" alt="${p.name}" class="w-full h-full object-contain mix-blend-multiply drop-shadow-sm">
+                  <img src="${p.img}" alt="${p.name}" loading="lazy" class="w-full h-full object-contain mix-blend-multiply drop-shadow-sm">
                 </div>
                 <div class="p-3 sm:p-4 flex flex-col flex-grow">
                   <div class="text-[14px] font-bold text-[#0A6BAA] mb-1 font-sans">${p.name}</div>
                   <div class="flex-grow">
                     ${priceHtml}
                   </div>
-                  <button onclick="openCartModal('${p.name}', '${p.price}', '${p.img}', '${p.oldPrice}')" class="w-full mt-3 sm:mt-4 py-2 sm:py-2.5 bg-[#0A6BAA] text-white text-sm sm:text-xs font-bold rounded hover:bg-[#085d96] transition-colors">
+                  <button onclick="event.stopPropagation(); openCartModal('${p.name}', '${p.price}', '${p.img}', '${p.oldPrice}')" class="w-full mt-3 sm:mt-4 py-2 sm:py-2.5 bg-[#0A6BAA] text-white text-sm sm:text-xs font-bold rounded hover:bg-[#085d96] transition-colors">
                     Buy
                   </button>
                 </div>
