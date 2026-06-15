@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLUB OF 1986 - Product Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Barlow', sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+    }
+    
+    h1, h2, h3, h4, h5, .font-heading {
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+
+    /* Custom Scrollbar for Right Column on Desktop */
+    .sticky-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+    .sticky-scroll::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+    .sticky-scroll::-webkit-scrollbar-thumb {
+      background: #c1c1c1; 
+      border-radius: 4px;
+    }
+    .sticky-scroll::-webkit-scrollbar-thumb:hover {
+      background: #a8a8a8; 
+    }
+
+    .size-btn.active {
+      background-color: #0A6BAA;
+      color: white;
+      border-color: #0A6BAA;
+    }
+  </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+  <!-- Mobile Nav Overlay -->
+  <div id="mobile-nav-overlay" class="fixed inset-0 bg-black/60 z-[90] hidden backdrop-blur-sm transition-opacity"
+    onclick="toggleMobileNav()"></div>
+
+  <!-- Mobile Nav Sidebar -->
+  <aside id="nav-sidebar"
+    class="fixed inset-y-0 left-0 z-[100] w-[280px] bg-white transform -translate-x-full transition-transform duration-300 overflow-y-auto flex flex-col">
+    <div class="flex items-center justify-between p-5 border-b border-gray-100">
+      <a href="index.html" class="flex items-center text-[#0A6BAA]">
+        <i class="ti ti-brand-abstract text-3xl font-bold"></i>
+        <span class="ml-2 font-bold text-lg font-sans">CLUB.OF.1986</span>
+      </a>
+      <button onclick="toggleMobileNav()"
+        class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50 border border-gray-200 text-gray-500 hover:text-black hover:bg-gray-100">
+        <i class="ti ti-x text-lg"></i>
+      </button>
+    </div>
+    <div class="flex flex-col py-4 px-3 space-y-1">
+      <a href="all-products.html"
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Best
+        Seller</a>
+      <a href="all-products.html"
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">New
+        Arrival</a>
+      <a href="all-products.html"
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Collection</a>
+      <a href="all-products.html"
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Categories</a>
+      <a href="all-products.html"
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Sale</a>
+    </div>
+    <div class="mt-auto p-5 border-t border-gray-100">
+      <button onclick="window.location.href='wishlist.html'"
+        class="w-full py-3 bg-[#0A6BAA] text-white font-bold rounded-lg hover:bg-[#085d96] transition-colors flex justify-center items-center gap-2">
+        <i class="ti ti-user"></i> Login / Register
+      </button>
+    </div>
+  </aside>
+
+  <nav id="navbar"
+    class="absolute top-0 left-0 w-full z-50 py-3 px-4 md:px-8 flex justify-between items-center text-white bg-[#155b7f]/85 backdrop-blur-sm transition-all duration-300">
+    <div class="flex items-center space-x-4 md:space-x-8">
+      <!-- Hamburger Menu Button (Mobile Only) -->
+      <button onclick="toggleMobileNav()" class="md:hidden hover:text-gray-300 transition-colors">
+        <i class="ti ti-menu-2 text-2xl"></i>
+      </button>
+
+      <a href="index.html" class="flex items-center">
+        <i class="ti ti-brand-abstract text-2xl md:text-3xl font-bold"></i>
+      </a>
+      <div class="hidden md:flex space-x-6 text-sm font-medium font-sans">
+        <a href="all-products.html" class="hover:text-gray-300 transition-colors">Best Seller</a>
+        <a href="all-products.html" class="hover:text-gray-300 transition-colors">New Arrival</a>
+        <a href="all-products.html" class="hover:text-gray-300 transition-colors">Collection</a>
+        <a href="all-products.html" class="hover:text-gray-300 transition-colors">Categories</a>
+        <a href="all-products.html" class="hover:text-gray-300 transition-colors">Sale</a>
+      </div>
+    </div>
+
+    <div class="flex items-center space-x-5">
+      <button class="hover:text-gray-300 transition-colors"><i class="ti ti-search text-xl"></i></button>
+      <button onclick="window.location.href='wishlist.html'" class="hover:text-gray-300 transition-colors"><i class="ti ti-user text-xl"></i></button>
+      <button onclick="window.location.href='cart.html'" class="relative hover:text-gray-300 transition-colors">
+        <i class="ti ti-shopping-cart text-xl"></i>
+        <span
+          class="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="flex-grow w-full flex flex-col md:flex-row items-start pb-32 relative">
+    
+    <!-- LEFT COLUMN: Product Images -->
+    <div class="w-full md:w-[60%] flex flex-col gap-0 mt-10">
+      
+      <!-- Main Large Image -->
+      <div class="w-full mt-20 aspect-[4/5] sm:aspect-square md:aspect-[3/4] bg-gray-100 overflow-hidden relative rounded-md">
+        <img src="images/product/main large image - productdetail.webp" alt="Rachi Workwear Jacket Main" class="w-full h-full object-cover">
+      </div>
+
+      <!-- 2x2 Image Grid -->
+      <div class="grid grid-cols-2 gap-0">
+        <div class="aspect-square bg-gray-100 overflow-hidden mt-2 mr-1 mb-2 rounded-md">
+          <img src="images/product/section 2x2 Image Grid 1 -productdetail .webp" alt="Detail 1" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-square bg-gray-100 overflow-hidden mt-2 mb-2 ml-1 rounded-md">
+          <img src="images/product/section 2x2 Image Grid 2 -productdetail .webp.webp" alt="Detail 2" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-square bg-gray-100 overflow-hidden mt-2 mb-2 mr-1 rounded-md">
+          <img src="images/product/section 2x2 Image Grid 3 -productdetail .webp.webp" alt="Detail 3" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-square bg-gray-100 overflow-hidden mt-2 mb-2 ml-1 rounded-md">
+          <img src="images/product/section 2x2 Image Grid 4 -productdetail .webp.webp" alt="Detail 4" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- Size Chart Banner -->
+      <div class="w-full bg-[#0e6191] text-white p-12 md:p-16 flex flex-col items-center justify-center">
+        <h2 class="text-6xl sm:text-7xl md:text-8xl font-heading tracking-wide mb-2 text-center leading-none">SIZE CHART</h2>
+        <p class="text-xl md:text-2xl font-medium tracking-widest">(gambar)</p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: Product Details -->
+    <div class="w-full md:w-[40%] flex flex-col p-6 md:p-10 lg:p-16">
+      
+      <h1 class="text-[#135d88] text-4xl sm:text-5xl font-bold mb-4 leading-tight mt-20">Rachi Workwear<br>Jacket</h1>
+      
+      <p class="text-[#135d88] text-2xl font-bold mb-6">Rp. 350.000,-</p>
+
+      <!-- Size Selector -->
+      <div class="mb-5">
+        <label class="block text-[#135d88] text-lg mb-2">Size</label>
+        <div class="flex gap-2 flex-wrap">
+          <button onclick="selectSize(this)" class="size-btn w-10 h-10 rounded border border-[#135d88] text-[#135d88] font-bold text-sm flex items-center justify-center transition-colors">S</button>
+          <button onclick="selectSize(this)" class="size-btn w-10 h-10 rounded border border-[#135d88] text-[#135d88] font-bold text-sm flex items-center justify-center transition-colors">M</button>
+          <button onclick="selectSize(this)" class="size-btn w-10 h-10 rounded border border-[#135d88] bg-[#0A6BAA] text-white font-bold text-sm flex items-center justify-center transition-colors active">L</button>
+          <button onclick="selectSize(this)" class="size-btn w-10 h-10 rounded border border-[#135d88] text-[#135d88] font-bold text-sm flex items-center justify-center transition-colors">XL</button>
+          <button onclick="selectSize(this)" class="size-btn w-10 h-10 rounded border border-[#135d88] text-[#135d88] font-bold text-sm flex items-center justify-center transition-colors">XXL</button>
+        </div>
+      </div>
+
+      <!-- Color Selector -->
+      <div class="mb-5">
+        <label class="block text-[#135d88] text-lg mb-2">Color</label>
+        <div class="flex gap-2">
+          <button class="w-8 h-8 rounded bg-[#B0C4DE] border-[3px] border-transparent hover:border-gray-300 transition-colors"></button>
+        </div>
+      </div>
+
+      <!-- Quantity Selector -->
+      <div class="mb-8">
+        <label class="block text-[#135d88] text-lg mb-2">Quantity</label>
+        <div class="flex border border-[#135d88] rounded overflow-hidden h-10 w-[120px]">
+          <button class="w-10 flex items-center justify-center text-[#135d88] hover:bg-gray-100 transition-colors" onclick="updateQty(-1)">
+            <i class="ti ti-minus"></i>
+          </button>
+          <input type="text" id="qtyInput" value="86" class="w-12 text-center border-x border-[#135d88] font-medium text-lg focus:outline-none text-[#135d88] bg-white" readonly>
+          <button class="w-10 flex items-center justify-center text-[#135d88] hover:bg-gray-100 transition-colors" onclick="updateQty(1)">
+            <i class="ti ti-plus"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col gap-3 mb-10">
+        <button class="w-full border-2 border-[#135d88] text-[#135d88] font-bold py-3 rounded hover:bg-blue-50 transition-colors text-center text-lg">
+          Add to Cart
+        </button>
+        <button class="w-full bg-[#135d88] text-white font-bold py-3 rounded hover:bg-[#0f4d71] transition-colors text-center text-lg shadow-sm">
+          But it Now
+        </button>
+      </div>
+
+      <!-- Product Description Section -->
+      <div class="border border-[#135d88] rounded-xl p-6 text-[#135d88] text-sm leading-relaxed tracking-wide space-y-6">
+        
+        <div>
+          <h4 class="font-bold mb-3 text-base">Product Description</h4>
+          <p class="font-bold">NEW RELEASE</p>
+          <p class="font-bold uppercase">AMETORA COLLECTION 01 — "THE HERRITAGE"</p>
+          <p class="mt-3">Terinspirasi dari filosofi Ametora — perpaduan gaya klasik Amerika dan presisi estetika Jepang — koleksi ini menghadirkan harmoni antara fungsi, detail, dan karakter dalam satu karya autentik dari CLUB OF 1986 - Ametora Series.</p>
+        </div>
+
+        <div>
+          <p class="font-bold">RACHI CLUB OF 1986 Work Vintage Jacket</p>
+          <p class="mt-3">Terinspirasi dari jaket workwear klasik yang menemani para pekerja di bengkel, dermaga, hingga jalanan kota.</p>
+          <p class="mt-3">RACHI dirancang untuk menghadirkan perlindungan, kenyamanan, Durability dan karakter dalam satu siluet yang timeless serta membawa semangat ke era modern.</p>
+          <p class="mt-3">Mengusung sentuhan vintage khas era 80-90an, jaket ini tampil dengan nuansa kasual yang kuat, ikonik, dan penuh identitas. Struktur yang kokoh dipadukan dengan detail heritage menciptakan keseimbangan antara utilitas dan estetika.</p>
+          <p class="mt-3">Material Premium Canvas yang durable berpadu dengan tartan lining klasik di bagian dalam untuk memberikan rasa hangat sekaligus sentuhan autentik.</p>
+          <p class="mt-3">Detail corduroy collar, D-ring strap, serta bordir presisi tinggi di bagian depan memperkuat karakter workwear klasik yang refined.</p>
+          <p class="mt-3 font-medium">Bukan sekadar jaket kerja — tapi representasi karakter.</p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-2 uppercase">SPESIFIKASI PRODUK</h4>
+          <p class="font-bold mb-1">Material</p>
+          <ul class="space-y-1">
+            <li>- Outer: Premium Canvas (durable & structured)</li>
+            <li>- Inner: Tartan Lining bernuansa vintage & premium</li>
+            <li>- Collar: Corduroy Collar (tekstur lembut & klasik)</li>
+            <li>- Arm Sleeves: Snap Button Adjustment</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-bold mb-1">Konstruksi & Detail</p>
+          <ul class="space-y-1">
+            <li>- D-Ring Strap Detail</li>
+            <li>- Snap Button + Extra Placket Snap Button</li>
+            <li>- Digital Embroidery di bagian depan</li>
+            <li>- Signature Label Authentic</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-bold mb-1">Pocket Configuration and Color</p>
+          <ul class="space-y-1">
+            <li>- 2 kantong bawah</li>
+            <li>- 1 kantong dalam bagian dada</li>
+            <li>- Color: Cream</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-2 uppercase">SIZE GUIDE</h4>
+          <p class="italic mb-2">Menggunakan standar International Size</p>
+          <p>Jika ragu menentukan size, silakan hubungi admin dengan menyertakan tinggi & berat badan agar kami bantu rekomendasikan ukuran terbaik.</p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-2 uppercase">QUALITY GUARANTEE</h4>
+          <p class="mb-2">Setiap produk telah melalui proses quality control standar internasional sebelum pengiriman.</p>
+          <p>Jika ditemukan cacat produksi (di luar kerusakan akibat pengiriman), produk akan diganti dengan yang baru.</p>
+        </div>
+
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- WAVE FOOTER -->
+  <footer class="bg-[#135d88] text-white pt-16 pb-12 mt-16 text-center relative reveal">
+
+    <div class="mb-8">
+      <i class="ti ti-brand-abstract text-5xl mb-4 inline-block"></i>
+      <h2 class="text-2xl font-serif italic tracking-wider">Past<span
+          class="font-sans font-bold not-italic">Over</span>Future</h2>
+    </div>
+
+    <div class="flex justify-center items-center space-x-6 mb-10 text-2xl">
+      <a href="#" class="hover:text-blue-300 transition-colors hover:scale-110 transform"><i
+          class="ti ti-brand-instagram"></i></a>
+      <a href="#" class="hover:text-blue-300 transition-colors hover:scale-110 transform"><i
+          class="ti ti-brand-tiktok"></i></a>
+      <a href="#" class="hover:text-blue-300 transition-colors hover:scale-110 transform"><i
+          class="ti ti-brand-x"></i></a>
+      <a href="#" class="hover:text-blue-300 transition-colors hover:scale-110 transform"><i
+          class="ti ti-brand-youtube"></i></a>
+    </div>
+
+    <div class="mb-6">
+      <p class="text-sm font-semibold mb-4 tracking-wide uppercase text-gray-300">Metode Pembayaran</p>
+      <div class="flex justify-center items-center space-x-3 md:space-x-4">
+        <div
+          class="w-10 h-10 md:w-12 md:h-12 bg-white text-gray-500 rounded-full flex items-center justify-center shadow-md cursor-pointer hover:bg-gray-100 text-gray-900 text-[10px] font-bold">
+          BCA</div>
+        <div
+          class="w-10 h-10 md:w-12 md:h-12 bg-white text-gray-500 rounded-full flex items-center justify-center shadow-md cursor-pointer hover:bg-gray-100 text-gray-900 text-[10px] font-bold">
+          OVO</div>
+        <div
+          class="w-10 h-10 md:w-12 md:h-12 bg-white text-gray-500 rounded-full flex items-center justify-center shadow-md cursor-pointer hover:bg-gray-100 text-gray-900 text-[10px] font-bold">
+          GPay</div>
+        <div
+          class="w-10 h-10 md:w-12 md:h-12 bg-white text-gray-500 rounded-full flex items-center justify-center shadow-md cursor-pointer hover:bg-gray-100 text-gray-900 text-[10px] font-bold">
+          QRIS</div>
+        <div
+          class="w-10 h-10 md:w-12 md:h-12 bg-white text-gray-500 rounded-full flex items-center justify-center shadow-md cursor-pointer hover:bg-gray-100 text-gray-900 text-[10px] font-bold">
+          COD</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Nav
+    function toggleMobileNav() {
+      const overlay = document.getElementById('mobile-nav-overlay');
+      const sidebar = document.getElementById('nav-sidebar');
+      
+      if (overlay.classList.contains('hidden')) {
+        overlay.classList.remove('hidden');
+        setTimeout(() => {
+          overlay.classList.add('opacity-100');
+          sidebar.classList.remove('-translate-x-full');
+        }, 10);
+      } else {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.remove('opacity-100');
+        setTimeout(() => overlay.classList.add('hidden'), 300);
+      }
+    }
+
+    // Size Selection
+    function selectSize(btn) {
+      document.querySelectorAll('.size-btn').forEach(b => {
+        b.classList.remove('active', 'bg-[#0A6BAA]', 'text-white');
+        b.classList.add('text-[#135d88]');
+      });
+      btn.classList.add('active', 'bg-[#0A6BAA]', 'text-white');
+      btn.classList.remove('text-[#135d88]');
+    }
+
+    // Quantity Increment/Decrement
+    function updateQty(change) {
+      const input = document.getElementById('qtyInput');
+      let val = parseInt(input.value) + change;
+      if (val < 1) val = 1;
+      input.value = val;
+    }
+  </script>
+</body>
+</html>

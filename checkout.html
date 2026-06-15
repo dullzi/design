@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLUB OF 1986 - Checkout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Barlow', sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+    }
+    h1, h2, h3, h4, h5, .font-heading {
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+    
+    /* Input placeholder styling */
+    ::placeholder {
+      color: #a0aec0;
+    }
+  </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+  <!-- Mobile Nav Overlay -->
+  <div id="mobile-nav-overlay" class="fixed inset-0 bg-black/60 z-[90] hidden backdrop-blur-sm transition-opacity" onclick="toggleMobileNav()"></div>
+
+  <!-- Mobile Nav Sidebar -->
+  <aside id="nav-sidebar" class="fixed inset-y-0 left-0 z-[100] w-[280px] bg-white transform -translate-x-full transition-transform duration-300 overflow-y-auto flex flex-col">
+    <div class="flex items-center justify-between p-5 border-b border-gray-100">
+      <a href="#" class="flex items-center text-[#0A6BAA]">
+        <i class="ti ti-brand-abstract text-3xl font-bold"></i>
+        <span class="ml-2 font-bold text-lg font-sans">CLUB.OF.1986</span>
+      </a>
+      <button onclick="toggleMobileNav()" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50 border border-gray-200 text-gray-500 hover:text-black hover:bg-gray-100">
+        <i class="ti ti-x text-lg"></i>
+      </button>
+    </div>
+    <div class="flex flex-col py-4 px-3 space-y-1">
+      <a href="#"
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Best
+        Seller</a>
+      <a href="#"
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">New
+        Arrival</a>
+      <a href="#"
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Collection</a>
+      <a href="#"
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Categories</a>
+      <a href="#"
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Sale</a>
+    </div>
+    <div class="mt-auto p-5 border-t border-gray-100">
+      <button class="w-full py-3 bg-[#0A6BAA] text-white font-bold rounded-lg hover:bg-[#085d96] transition-colors flex justify-center items-center gap-2">
+        <i class="ti ti-user"></i> Login / Register
+      </button>
+    </div>
+  </aside>
+
+  <nav id="navbar" class="sticky top-0 w-full z-50 py-3 px-4 md:px-8 flex justify-between items-center text-white bg-[#155b7f] transition-all duration-300">
+    <div class="flex items-center space-x-4 md:space-x-8">
+      <button onclick="toggleMobileNav()" class="md:hidden hover:text-gray-300 transition-colors">
+        <i class="ti ti-menu-2 text-2xl"></i>
+      </button>
+      <a href="index.html" class="flex items-center">
+        <i class="ti ti-brand-abstract text-2xl md:text-3xl font-bold"></i>
+      </a>
+      <div class="hidden md:flex space-x-6 text-sm font-medium font-sans">
+        <a href="#" class="hover:text-gray-300 transition-colors">Best Seller</a>
+        <a href="#" class="hover:text-gray-300 transition-colors">New Arrival</a>
+        <a href="#" class="hover:text-gray-300 transition-colors">Collection</a>
+        <a href="#" class="hover:text-gray-300 transition-colors">Categories</a>
+        <a href="#" class="hover:text-gray-300 transition-colors">Sale</a>
+      </div>
+    </div>
+    <div class="flex items-center space-x-5">
+      <button class="hover:text-gray-300 transition-colors"><i class="ti ti-search text-xl"></i></button>
+      <button class="hover:text-gray-300 transition-colors" onclick="simulateLogin()" title="Simulate Login"><i class="ti ti-user text-xl"></i></button>
+      <a href="cart.html" class="relative hover:text-gray-300 transition-colors">
+        <i class="ti ti-shopping-cart text-xl"></i>
+        <span class="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">1</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Checkout Container -->
+  <main class="w-full flex-grow flex flex-col md:flex-row min-h-screen">
+    
+    <!-- Left Section: Forms (Green Background) -->
+    <div class="flex-1 bg-[#23aa9e] p-6 md:p-10 lg:pt-12 lg:px-16 lg:pb-32 flex justify-center">
+      <div class="w-full max-w-lg">
+        
+        <!-- Contact Section -->
+        <div class="mb-5">
+          <h2 class="text-white text-xl font-bold font-sans mb-3">Contact</h2>
+          <input type="email" id="email" placeholder="Email" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88] transition-shadow">
+        </div>
+
+        <!-- Delivery Section -->
+        <div class="mb-5">
+          <h2 class="text-white text-xl font-bold font-sans mb-3">Delivery</h2>
+          
+          <div class="space-y-3">
+            <div class="relative">
+              <label class="text-[10px] text-gray-500 absolute top-1.5 left-3">Country/Region</label>
+              <select id="country" class="w-full pt-5 pb-1.5 px-3 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88] appearance-none cursor-pointer">
+                <option value="Indonesia">Indonesia</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Singapore">Singapore</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-600">
+                <i class="ti ti-chevron-down"></i>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <input type="text" id="firstName" placeholder="First Name" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
+              <input type="text" id="lastName" placeholder="Last Name" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
+            </div>
+
+            <input type="text" id="address" placeholder="Address" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
+            <input type="text" id="addressDetail" placeholder="Address detail, apartement, suite, etc (Optional)" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
+            <input type="text" id="city" placeholder="City" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div class="relative">
+                <select id="province" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88] appearance-none cursor-pointer text-gray-500">
+                  <option value="" disabled selected>Province</option>
+                  <option value="DKI Jakarta">DKI Jakarta</option>
+                  <option value="Jawa Barat">Jawa Barat</option>
+                  <option value="Banten">Banten</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-600">
+                  <i class="ti ti-chevron-down"></i>
+                </div>
+              </div>
+              <input type="text" id="postalCode" placeholder="Postal Code" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
+            </div>
+
+            <input type="tel" id="phoneNumber" placeholder="Phone Number" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
+          </div>
+
+          <div class="mt-4 flex items-center">
+            <input type="checkbox" id="saveInfo" class="w-4 h-4 text-[#135d88] bg-white border-gray-300 rounded focus:ring-[#135d88] cursor-pointer">
+            <label for="saveInfo" class="ml-2 text-white text-sm cursor-pointer">Save this information for next time.</label>
+          </div>
+        </div>
+
+        <!-- Shipping Method Section -->
+        <div class="mb-5">
+          <h2 class="text-white text-xl font-bold font-sans mb-3">Shipping Method</h2>
+          <div class="bg-[#aae3dc] text-[#3e7a74] p-3 rounded text-sm text-center">
+            Enter your shipping address to view available shipping methods.
+          </div>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="mb-6">
+          <h2 class="text-white text-xl font-bold font-sans mb-3">Payment</h2>
+          <div class="bg-white p-3 rounded text-center text-sm font-medium text-gray-800 shadow-sm border border-gray-100 flex items-center justify-center gap-2 cursor-pointer hover:bg-gray-50 transition-colors">
+            Payment Via Midtrans
+          </div>
+        </div>
+
+        <!-- Action Button -->
+        <button id="payBtn" onclick="processPayment()" class="w-full bg-[#135d88] text-white font-bold text-base py-3 rounded hover:bg-[#0f4d71] transition-colors shadow-md">
+          Pay Now
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Right Section: Order Summary (White Background) -->
+    <div class="w-full md:w-[450px] lg:w-[500px] bg-white p-6 md:p-10 border-l border-gray-200">
+      
+      <!-- Product Item -->
+      <div class="flex items-center gap-4 mb-6 border-b border-gray-100 pb-6">
+        <div class="relative w-20 h-20 bg-gray-50 rounded-lg border border-gray-200 p-1 flex-shrink-0">
+          <img src="images/product/foto jacket 1 -allproduct.webp" alt="Kazuma Bomber Jacket" class="w-full h-full object-contain rounded">
+          <span class="absolute -top-2 -right-2 bg-gray-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full opacity-80">1</span>
+        </div>
+        <div class="flex-grow">
+          <h3 class="font-sans font-bold text-[#135d88] text-base leading-tight">Kazuma Bomber Jacket</h3>
+          <p class="text-xs text-gray-500 mt-1">Size : L</p>
+        </div>
+        <div class="font-sans font-medium text-[#135d88] text-sm">
+          Rp. 150.000,-
+        </div>
+      </div>
+
+      <!-- Cost Breakdown -->
+      <div class="flex flex-col gap-3 border-b border-gray-100 pb-6 mb-6">
+        <div class="flex justify-between text-sm">
+          <span class="text-[#135d88]">Subtotal</span>
+          <span class="font-medium text-[#135d88]">Rp. 150.000,-</span>
+        </div>
+        <div class="flex justify-between text-sm">
+          <span class="text-[#135d88]">Shipping</span>
+          <span class="text-xs text-gray-500">Enter shipping address</span>
+        </div>
+      </div>
+
+      <!-- Total -->
+      <div class="flex justify-between items-center">
+        <span class="font-sans font-bold text-[#135d88] text-lg">Total</span>
+        <div class="flex items-end gap-2">
+          <span class="text-xs text-gray-400 mb-1">IDR</span>
+          <span class="font-sans font-bold text-2xl text-[#135d88]">Rp. 150.000,-</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+  <script>
+    // Mobile Nav
+    function toggleMobileNav() {
+      const overlay = document.getElementById('mobile-nav-overlay');
+      const sidebar = document.getElementById('nav-sidebar');
+      
+      if (overlay.classList.contains('hidden')) {
+        overlay.classList.remove('hidden');
+        setTimeout(() => {
+          overlay.classList.add('opacity-100');
+          sidebar.classList.remove('-translate-x-full');
+        }, 10);
+      } else {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.remove('opacity-100');
+        setTimeout(() => overlay.classList.add('hidden'), 300);
+      }
+    }
+
+    // Auto-fill feature (Simulated login state)
+    let isLoggedIn = false;
+    
+    function simulateLogin() {
+      isLoggedIn = !isLoggedIn;
+      if (isLoggedIn) {
+        document.getElementById('email').value = "user@example.com";
+        document.getElementById('firstName').value = "John";
+        document.getElementById('lastName').value = "Doe";
+        document.getElementById('address').value = "Jl. Sudirman No. 123";
+        document.getElementById('addressDetail').value = "Apt 4B";
+        document.getElementById('city').value = "Jakarta Selatan";
+        document.getElementById('province').value = "DKI Jakarta";
+        document.getElementById('province').classList.remove('text-gray-500');
+        document.getElementById('postalCode').value = "12345";
+        document.getElementById('phoneNumber').value = "081234567890";
+        document.getElementById('saveInfo').checked = true;
+        alert("Simulated Login: Form auto-filled with your saved data.");
+      } else {
+        // Clear form
+        const inputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]');
+        inputs.forEach(input => input.value = '');
+        document.getElementById('province').value = "";
+        document.getElementById('province').classList.add('text-gray-500');
+        document.getElementById('saveInfo').checked = false;
+        alert("Simulated Logout: Form cleared.");
+      }
+    }
+
+    // Check if user came from a logged-in state (Mock checking localStorage)
+    document.addEventListener("DOMContentLoaded", () => {
+      // For demonstration, we could auto-fill if we had a flag in localStorage
+      if(localStorage.getItem('isLoggedIn') === 'true') {
+        simulateLogin();
+      }
+      
+      // Fix select text color on change
+      document.getElementById('province').addEventListener('change', function() {
+        if(this.value) {
+          this.classList.remove('text-gray-500');
+          this.classList.add('text-gray-800');
+        }
+      });
+    });
+
+    // Process Payment Validation
+    function processPayment() {
+      const email = document.getElementById('email').value;
+      const firstName = document.getElementById('firstName').value;
+      const address = document.getElementById('address').value;
+      
+      if (!email || !firstName || !address) {
+        alert("Please fill in your contact and delivery details first.");
+        return;
+      }
+      
+      const btn = document.getElementById('payBtn');
+      btn.innerHTML = '<i class="ti ti-loader animate-spin mr-2"></i> Processing...';
+      btn.classList.add('opacity-80', 'cursor-not-allowed');
+      
+      setTimeout(() => {
+        alert("Redirecting to Midtrans payment gateway...");
+        btn.innerHTML = 'Pay Now';
+        btn.classList.remove('opacity-80', 'cursor-not-allowed');
+        // window.location.href = 'payment-success.html'; // In a real app
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
