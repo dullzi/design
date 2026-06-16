@@ -45,6 +45,7 @@
       letter-spacing: -0.02em !important;
     }
   </style>
+
 </head>
 <body class="antialiased flex flex-col min-h-screen">
 
@@ -54,7 +55,7 @@
   <!-- Mobile Nav Sidebar -->
   <aside id="nav-sidebar" class="fixed inset-y-0 left-0 z-[100] w-[280px] bg-white transform -translate-x-full transition-transform duration-300 overflow-y-auto flex flex-col">
     <div class="flex items-center justify-between p-5 border-b border-gray-100">
-      <a href="index.html" class="flex items-center text-[#026197]">
+      <a href="index.html" class="flex items-center text-[#0A6BAA]">
         <img src="images/logo.png" alt="Logo" class="h-8 md:h-10 w-auto">
         <span class="ml-2 font-bold text-lg font-sans">CLUB.OF.1986</span>
       </a>
@@ -64,26 +65,26 @@
     </div>
     <div class="flex flex-col py-4 px-3 space-y-1">
       <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">Best
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Best
         Seller</a>
       <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">New
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">New
         Arrival</a>
       <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">Collection</a>
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Collection</a>
       <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">Categories</a>
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Categories</a>
       <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">Sale</a>
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Sale</a>
     </div>
     <div class="mt-auto p-5 border-t border-gray-100">
-      <button onclick="window.location.href='wishlist.html'" class="w-full py-3 bg-[#026197] text-white font-bold rounded-lg hover:bg-[#024c75] transition-colors flex justify-center items-center gap-2">
+      <button onclick="window.location.href='wishlist.html'" class="w-full py-3 bg-[#0A6BAA] text-white font-bold rounded-lg hover:bg-[#085d96] transition-colors flex justify-center items-center gap-2">
         <i class="ti ti-user"></i> Login / Register
       </button>
     </div>
   </aside>
 
-  <nav id="navbar" class="absolute top-0 left-0 w-full z-50 py-3 px-4 md:px-8 flex justify-between items-center text-white bg-[#026197]/85 backdrop-blur-sm transition-all duration-300">
+  <nav id="navbar" class="absolute top-0 left-0 w-full z-50 py-3 px-4 md:px-8 flex justify-between items-center text-white bg-[#155b7f]/85 backdrop-blur-sm transition-all duration-300">
     <div class="flex items-center space-x-4 md:space-x-8">
       <button onclick="toggleMobileNav()" class="md:hidden hover:text-gray-300 transition-colors">
         <i class="ti ti-menu-2 text-2xl"></i>
@@ -112,28 +113,28 @@
   <!-- Main Cart Content -->
   <main class="w-full max-w-[1200px] mx-auto px-4 md:px-10 pt-32 pb-10 flex-grow">
     <div class="mb-10">
-      <h1 class="font-sans font-bold text-5xl md:text-6xl text-[#026197] mb-8">Your Cart</h1>
+      <h1 class="font-sans font-bold text-5xl md:text-6xl text-[#135d88] mb-8">Your Cart</h1>
     </div>
 
     <!-- Desktop Table Header -->
-    <div class="hidden md:grid grid-cols-[12fr_3fr_3fr] gap-4 border-b border-[#026197]/20 pb-2 mb-6 text-[#026197] text-sm font-semibold px-2">
+    <div class="hidden md:grid grid-cols-[12fr_3fr_3fr] gap-4 border-b border-[#135d88]/20 pb-2 mb-6 text-[#135d88] text-sm font-semibold px-2">
       <div>Product</div>
       <div class="text-center">Quantity</div>
       <div class="text-right">Total</div>
     </div>
 
     <!-- Cart Items -->
-    <div class="flex flex-col border-b border-[#026197]/20 mb-8">
+    <div class="flex flex-col border-b border-[#135d88]/20 mb-8">
       <!-- Item 1 -->
-      <div class="grid grid-cols-1 md:grid-cols-[12fr_3fr_3fr] gap-4 py-6 border-t border-[#026197]/20 items-center px-2">
+      <div class="grid grid-cols-1 md:grid-cols-[12fr_3fr_3fr] gap-4 py-6 border-t border-[#135d88]/20 items-center px-2">
         <div class="flex gap-6 items-center">
           <div class="w-32 md:w-40 aspect-square border border-gray-200 rounded-xl overflow-hidden flex-shrink-0 bg-white p-2 shadow-sm">
             <img src="images/product/foto jacket 1 -allproduct.webp" class="w-full h-full object-contain" alt="Kazuma Bomber Jacket">
           </div>
           <div class="flex flex-col justify-center">
-            <h3 class="font-sans font-bold text-xl md:text-2xl text-[#026197] mb-1">Kazuma<br>Bomber Jacket</h3>
-            <p class="font-sans text-[#026197] mb-1">Rp. 150.000,-</p>
-            <p class="font-sans text-[#026197]">Size : L</p>
+            <h3 class="font-sans font-bold text-xl md:text-2xl text-[#135d88] mb-1">Kazuma<br>Bomber Jacket</h3>
+            <p class="font-sans text-[#135d88] mb-1">Rp. 150.000,-</p>
+            <p class="font-sans text-[#135d88]">Size : L</p>
           </div>
         </div>
         <div class="flex items-center justify-center md:justify-center gap-4 mt-4 md:mt-0">
@@ -144,19 +145,19 @@
           </div>
           <button class="text-gray-400 hover:text-red-500 transition-colors" title="Hapus dari Cart"><i class="ti ti-trash text-2xl"></i></button>
         </div>
-        <div class="font-sans text-lg text-[#026197] text-right mt-2 md:mt-0">Rp. 150.000,-</div>
+        <div class="font-sans text-lg text-[#135d88] text-right mt-2 md:mt-0">Rp. 150.000,-</div>
       </div>
     
       <!-- Item 2 -->
-      <div class="grid grid-cols-1 md:grid-cols-[12fr_3fr_3fr] gap-4 py-6 border-t border-[#026197]/20 items-center px-2">
+      <div class="grid grid-cols-1 md:grid-cols-[12fr_3fr_3fr] gap-4 py-6 border-t border-[#135d88]/20 items-center px-2">
         <div class="flex gap-6 items-center">
           <div class="w-32 md:w-40 aspect-square border border-gray-200 rounded-xl overflow-hidden flex-shrink-0 bg-white p-2 shadow-sm">
             <img src="images/product/kaos -allprodcut.webp" class="w-full h-full object-contain" alt="Tamiya Tshirt">
           </div>
           <div class="flex flex-col justify-center">
-            <h3 class="font-sans font-bold text-xl md:text-2xl text-[#026197] mb-1">Tamiya Tshirt</h3>
-            <p class="font-sans text-[#026197] mb-1">Rp. 150.000,-</p>
-            <p class="font-sans text-[#026197]">Size : L</p>
+            <h3 class="font-sans font-bold text-xl md:text-2xl text-[#135d88] mb-1">Tamiya Tshirt</h3>
+            <p class="font-sans text-[#135d88] mb-1">Rp. 150.000,-</p>
+            <p class="font-sans text-[#135d88]">Size : L</p>
           </div>
         </div>
         <div class="flex items-center justify-center md:justify-center gap-4 mt-4 md:mt-0">
@@ -167,18 +168,18 @@
           </div>
           <button class="text-gray-400 hover:text-red-500 transition-colors" title="Hapus dari Cart"><i class="ti ti-trash text-2xl"></i></button>
         </div>
-        <div class="font-sans text-lg text-[#026197] text-right mt-2 md:mt-0">Rp. 150.000,-</div>
+        <div class="font-sans text-lg text-[#135d88] text-right mt-2 md:mt-0">Rp. 150.000,-</div>
       </div>
     </div>
 
     <!-- Order Summary -->
-    <div class="flex flex-col items-end w-full mb-10 text-[#026197] px-2">
+    <div class="flex flex-col items-end w-full mb-10 text-[#135d88] px-2">
       <div class="flex flex-col items-end gap-1 mb-2">
         <span class="text-xs tracking-wide">Sub Total</span>
         <span class="text-2xl md:text-3xl font-bold font-sans">Rp. 300.000,-</span>
       </div>
       <span class="text-xs mb-4">Taxes and shipping calculated at checkout</span>
-      <button class="bg-[#026197] text-white font-bold py-3 px-12 rounded hover:bg-[#024c75] transition-colors text-center text-sm w-full max-w-[280px]">
+      <button class="bg-[#135d88] text-white font-bold py-3 px-12 rounded hover:bg-[#0f4d71] transition-colors text-center text-sm w-full max-w-[280px]">
         Check Out
       </button>
     </div>
@@ -187,7 +188,7 @@
   <!-- Featured Product Carousel (Full width) -->
   <section class="w-full mb-20 overflow-hidden py-10" style="background-color: #fcfcfc;">
     <div class="max-w-[1200px] mx-auto px-4 md:px-10 mb-6">
-      <h3 class="font-sans text-sm font-semibold text-[#026197]">Featured Product</h3>
+      <h3 class="font-sans text-sm font-semibold text-[#135d88]">Featured Product</h3>
     </div>
     
     <!-- The carousel container -->
@@ -198,7 +199,7 @@
         <div class="aspect-square flex items-center justify-center mb-4 bg-white pointer-events-none">
           <img src="images/product/kaos -allprodcut.webp" alt="Product Name" class="w-full h-full object-contain pointer-events-none" draggable="false">
         </div>
-        <div class="text-[#026197] text-xs pointer-events-none">
+        <div class="text-[#135d88] text-xs pointer-events-none">
           <div class="font-bold mb-1">Product Name</div>
           <div>Rp. 150.000,-</div>
         </div>
@@ -209,7 +210,7 @@
         <div class="aspect-square flex items-center justify-center mb-4 bg-white pointer-events-none">
           <img src="images/product/kaos -allprodcut.webp" alt="Product Name" class="w-full h-full object-contain pointer-events-none" draggable="false">
         </div>
-        <div class="text-[#026197] text-xs pointer-events-none">
+        <div class="text-[#135d88] text-xs pointer-events-none">
           <div class="font-bold mb-1">Product Name</div>
           <div>Rp. 150.000,-</div>
         </div>
@@ -220,7 +221,7 @@
         <div class="aspect-square flex items-center justify-center mb-4 bg-white pointer-events-none">
           <img src="images/product/kaos -allprodcut.webp" alt="Product Name" class="w-full h-full object-contain pointer-events-none" draggable="false">
         </div>
-        <div class="text-[#026197] text-xs pointer-events-none">
+        <div class="text-[#135d88] text-xs pointer-events-none">
           <div class="font-bold mb-1">Product Name</div>
           <div>Rp. 150.000,-</div>
         </div>
@@ -231,7 +232,7 @@
         <div class="aspect-square flex items-center justify-center mb-4 bg-white pointer-events-none">
           <img src="images/product/kaos -allprodcut.webp" alt="Product Name" class="w-full h-full object-contain pointer-events-none" draggable="false">
         </div>
-        <div class="text-[#026197] text-xs pointer-events-none">
+        <div class="text-[#135d88] text-xs pointer-events-none">
           <div class="font-bold mb-1">Product Name</div>
           <div>Rp. 150.000,-</div>
         </div>
@@ -242,7 +243,7 @@
         <div class="aspect-square flex items-center justify-center mb-4 bg-white pointer-events-none">
           <img src="images/product/kaos -allprodcut.webp" alt="Product Name" class="w-full h-full object-contain pointer-events-none" draggable="false">
         </div>
-        <div class="text-[#026197] text-xs pointer-events-none">
+        <div class="text-[#135d88] text-xs pointer-events-none">
           <div class="font-bold mb-1">Product Name</div>
           <div>Rp. 150.000,-</div>
         </div>
@@ -253,7 +254,7 @@
         <div class="aspect-square flex items-center justify-center mb-4 bg-white pointer-events-none">
           <img src="images/product/kaos -allprodcut.webp" alt="Product Name" class="w-full h-full object-contain pointer-events-none" draggable="false">
         </div>
-        <div class="text-[#026197] text-xs pointer-events-none">
+        <div class="text-[#135d88] text-xs pointer-events-none">
           <div class="font-bold mb-1">Product Name</div>
           <div>Rp. 150.000,-</div>
         </div>
@@ -264,7 +265,7 @@
         <div class="aspect-square flex items-center justify-center mb-4 bg-white pointer-events-none">
           <img src="images/product/kaos -allprodcut.webp" alt="Product Name" class="w-full h-full object-contain pointer-events-none" draggable="false">
         </div>
-        <div class="text-[#026197] text-xs pointer-events-none">
+        <div class="text-[#135d88] text-xs pointer-events-none">
           <div class="font-bold mb-1">Product Name</div>
           <div>Rp. 150.000,-</div>
         </div>
@@ -274,7 +275,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#026197] text-white pt-16 pb-12 mt-auto text-center relative w-full">
+  <footer class="bg-[#135d88] text-white pt-16 pb-12 mt-auto text-center relative w-full">
     <div class="mb-8">
       <i class="ti ti-brand-abstract text-5xl mb-4 inline-block"></i>
       <h2 class="text-2xl font-serif italic tracking-wider">Past<span class="font-sans font-bold not-italic">Over</span>Future</h2>

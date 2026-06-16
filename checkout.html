@@ -34,6 +34,7 @@
       letter-spacing: -0.02em !important;
     }
   </style>
+
 </head>
 <body class="antialiased flex flex-col min-h-screen">
 
@@ -43,7 +44,7 @@
   <!-- Mobile Nav Sidebar -->
   <aside id="nav-sidebar" class="fixed inset-y-0 left-0 z-[100] w-[280px] bg-white transform -translate-x-full transition-transform duration-300 overflow-y-auto flex flex-col">
     <div class="flex items-center justify-between p-5 border-b border-gray-100">
-      <a href="#" class="flex items-center text-[#026197]">
+      <a href="#" class="flex items-center text-[#0A6BAA]">
         <img src="images/logo.png" alt="Logo" class="h-8 md:h-10 w-auto">
         <span class="ml-2 font-bold text-lg font-sans">CLUB.OF.1986</span>
       </a>
@@ -53,26 +54,26 @@
     </div>
     <div class="flex flex-col py-4 px-3 space-y-1">
       <a href="#"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">Best
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Best
         Seller</a>
       <a href="#"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">New
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">New
         Arrival</a>
       <a href="#"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">Collection</a>
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Collection</a>
       <a href="#"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">Categories</a>
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Categories</a>
       <a href="#"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">Sale</a>
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Sale</a>
     </div>
     <div class="mt-auto p-5 border-t border-gray-100">
-      <button class="w-full py-3 bg-[#026197] text-white font-bold rounded-lg hover:bg-[#024c75] transition-colors flex justify-center items-center gap-2">
+      <button class="w-full py-3 bg-[#0A6BAA] text-white font-bold rounded-lg hover:bg-[#085d96] transition-colors flex justify-center items-center gap-2">
         <i class="ti ti-user"></i> Login / Register
       </button>
     </div>
   </aside>
 
-  <nav id="navbar" class="sticky top-0 w-full z-50 py-3 px-4 md:px-8 flex justify-between items-center text-white bg-[#026197] transition-all duration-300">
+  <nav id="navbar" class="sticky top-0 w-full z-50 py-3 px-4 md:px-8 flex justify-between items-center text-white bg-[#155b7f] transition-all duration-300">
     <div class="flex items-center space-x-4 md:space-x-8">
       <button onclick="toggleMobileNav()" class="md:hidden hover:text-gray-300 transition-colors">
         <i class="ti ti-menu-2 text-2xl"></i>
@@ -102,13 +103,13 @@
   <main class="w-full flex-grow flex flex-col md:flex-row min-h-screen">
     
     <!-- Left Section: Forms (Green Background) -->
-    <div class="flex-1 bg-[#17aea5] p-6 md:p-10 lg:pt-12 lg:px-16 lg:pb-32 flex justify-center">
+    <div class="flex-1 bg-[#23aa9e] p-6 md:p-10 lg:pt-12 lg:px-16 lg:pb-32 flex justify-center">
       <div class="w-full max-w-lg">
         
         <!-- Contact Section -->
         <div class="mb-5">
           <h2 class="text-white text-xl font-bold font-sans mb-3">Contact</h2>
-          <input type="email" id="email" placeholder="Email" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#026197] transition-shadow">
+          <input type="email" id="email" placeholder="Email" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88] transition-shadow">
         </div>
 
         <!-- Delivery Section -->
@@ -118,7 +119,7 @@
           <div class="space-y-3">
             <div class="relative">
               <label class="text-[10px] text-gray-500 absolute top-1.5 left-3">Country/Region</label>
-              <select id="country" class="w-full pt-5 pb-1.5 px-3 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#026197] appearance-none cursor-pointer">
+              <select id="country" class="w-full pt-5 pb-1.5 px-3 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88] appearance-none cursor-pointer">
                 <option value="Indonesia">Indonesia</option>
                 <option value="Malaysia">Malaysia</option>
                 <option value="Singapore">Singapore</option>
@@ -129,17 +130,17 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <input type="text" id="firstName" placeholder="First Name" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#026197]">
-              <input type="text" id="lastName" placeholder="Last Name" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#026197]">
+              <input type="text" id="firstName" placeholder="First Name" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
+              <input type="text" id="lastName" placeholder="Last Name" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
             </div>
 
-            <input type="text" id="address" placeholder="Address" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#026197]">
-            <input type="text" id="addressDetail" placeholder="Address detail, apartement, suite, etc (Optional)" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#026197]">
-            <input type="text" id="city" placeholder="City" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#026197]">
+            <input type="text" id="address" placeholder="Address" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
+            <input type="text" id="addressDetail" placeholder="Address detail, apartement, suite, etc (Optional)" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
+            <input type="text" id="city" placeholder="City" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div class="relative">
-                <select id="province" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#026197] appearance-none cursor-pointer text-gray-500">
+                <select id="province" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88] appearance-none cursor-pointer text-gray-500">
                   <option value="" disabled selected>Province</option>
                   <option value="DKI Jakarta">DKI Jakarta</option>
                   <option value="Jawa Barat">Jawa Barat</option>
@@ -149,14 +150,14 @@
                   <i class="ti ti-chevron-down"></i>
                 </div>
               </div>
-              <input type="text" id="postalCode" placeholder="Postal Code" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#026197]">
+              <input type="text" id="postalCode" placeholder="Postal Code" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
             </div>
 
-            <input type="tel" id="phoneNumber" placeholder="Phone Number" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#026197]">
+            <input type="tel" id="phoneNumber" placeholder="Phone Number" class="w-full p-2.5 rounded bg-white text-gray-800 border-none outline-none focus:ring-2 focus:ring-[#135d88]">
           </div>
 
           <div class="mt-4 flex items-center">
-            <input type="checkbox" id="saveInfo" class="w-4 h-4 text-[#026197] bg-white border-gray-300 rounded focus:ring-[#026197] cursor-pointer">
+            <input type="checkbox" id="saveInfo" class="w-4 h-4 text-[#135d88] bg-white border-gray-300 rounded focus:ring-[#135d88] cursor-pointer">
             <label for="saveInfo" class="ml-2 text-white text-sm cursor-pointer">Save this information for next time.</label>
           </div>
         </div>
@@ -178,7 +179,7 @@
         </div>
 
         <!-- Action Button -->
-        <button id="payBtn" onclick="processPayment()" class="w-full bg-[#026197] text-white font-bold text-base py-3 rounded hover:bg-[#024c75] transition-colors shadow-md">
+        <button id="payBtn" onclick="processPayment()" class="w-full bg-[#135d88] text-white font-bold text-base py-3 rounded hover:bg-[#0f4d71] transition-colors shadow-md">
           Pay Now
         </button>
 
@@ -195,10 +196,10 @@
           <span class="absolute -top-2 -right-2 bg-gray-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full opacity-80">1</span>
         </div>
         <div class="flex-grow">
-          <h3 class="font-sans font-bold text-[#026197] text-base leading-tight">Kazuma Bomber Jacket</h3>
+          <h3 class="font-sans font-bold text-[#135d88] text-base leading-tight">Kazuma Bomber Jacket</h3>
           <p class="text-xs text-gray-500 mt-1">Size : L</p>
         </div>
-        <div class="font-sans font-medium text-[#026197] text-sm">
+        <div class="font-sans font-medium text-[#135d88] text-sm">
           Rp. 150.000,-
         </div>
       </div>
@@ -206,21 +207,21 @@
       <!-- Cost Breakdown -->
       <div class="flex flex-col gap-3 border-b border-gray-100 pb-6 mb-6">
         <div class="flex justify-between text-sm">
-          <span class="text-[#026197]">Subtotal</span>
-          <span class="font-medium text-[#026197]">Rp. 150.000,-</span>
+          <span class="text-[#135d88]">Subtotal</span>
+          <span class="font-medium text-[#135d88]">Rp. 150.000,-</span>
         </div>
         <div class="flex justify-between text-sm">
-          <span class="text-[#026197]">Shipping</span>
+          <span class="text-[#135d88]">Shipping</span>
           <span class="text-xs text-gray-500">Enter shipping address</span>
         </div>
       </div>
 
       <!-- Total -->
       <div class="flex justify-between items-center">
-        <span class="font-sans font-bold text-[#026197] text-lg">Total</span>
+        <span class="font-sans font-bold text-[#135d88] text-lg">Total</span>
         <div class="flex items-end gap-2">
           <span class="text-xs text-gray-400 mb-1">IDR</span>
-          <span class="font-sans font-bold text-2xl text-[#026197]">Rp. 150.000,-</span>
+          <span class="font-sans font-bold text-2xl text-[#135d88]">Rp. 150.000,-</span>
         </div>
       </div>
 

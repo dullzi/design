@@ -12,7 +12,7 @@
   <style>
     body {
       font-family: 'Barlow', sans-serif;
-      background-color: #17aea5; /* Teal background based on screenshot */
+      background-color: #28a096; /* Teal background based on screenshot */
       color: #333333;
     }
     h1, h2, h3, h4, h5, .font-heading {
@@ -29,6 +29,7 @@
       letter-spacing: -0.02em !important;
     }
   </style>
+
 </head>
 <body class="antialiased flex flex-col min-h-screen">
 
@@ -38,7 +39,7 @@
   <!-- Mobile Nav Sidebar -->
   <aside id="nav-sidebar" class="fixed inset-y-0 left-0 z-[100] w-[280px] bg-white transform -translate-x-full transition-transform duration-300 overflow-y-auto flex flex-col">
     <div class="flex items-center justify-between p-5 border-b border-gray-100">
-      <a href="index.html" class="flex items-center text-[#026197]">
+      <a href="index.html" class="flex items-center text-[#0A6BAA]">
         <img src="images/logo.png" alt="Logo" class="h-8 md:h-10 w-auto">
         <span class="ml-2 font-bold text-lg font-sans">CLUB.OF.1986</span>
       </a>
@@ -48,26 +49,26 @@
     </div>
     <div class="flex flex-col py-4 px-3 space-y-1">
       <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">Best
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Best
         Seller</a>
       <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">New
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">New
         Arrival</a>
       <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">Collection</a>
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Collection</a>
       <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">Categories</a>
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Categories</a>
       <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#026197] transition-colors">Sale</a>
+        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Sale</a>
     </div>
     <div class="mt-auto p-5 border-t border-gray-100">
-      <button class="w-full py-3 bg-[#026197] text-white font-bold rounded-lg hover:bg-[#024c75] transition-colors flex justify-center items-center gap-2" onclick="openLoginModal()">
+      <button class="w-full py-3 bg-[#0A6BAA] text-white font-bold rounded-lg hover:bg-[#085d96] transition-colors flex justify-center items-center gap-2" onclick="openLoginModal()">
         <i class="ti ti-user"></i> Login / Register
       </button>
     </div>
   </aside>
 
-  <nav id="navbar" class="absolute top-0 left-0 w-full z-50 py-3 px-4 md:px-8 flex justify-between items-center text-white bg-[#026197]/85 backdrop-blur-sm transition-all duration-300">
+  <nav id="navbar" class="absolute top-0 left-0 w-full z-50 py-3 px-4 md:px-8 flex justify-between items-center text-white bg-[#155b7f]/85 backdrop-blur-sm transition-all duration-300">
     <div class="flex items-center space-x-4 md:space-x-8">
       <button onclick="toggleMobileNav()" class="md:hidden hover:text-gray-300 transition-colors">
         <i class="ti ti-menu-2 text-2xl"></i>
@@ -98,23 +99,23 @@
     <h1 class="text-3xl md:text-4xl font-bold font-sans mb-6">My Account</h1>
     
     <!-- Banner -->
-    <div class="bg-[#e9f5f5] text-[#026197] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center mb-6 gap-6 shadow-md">
+    <div class="bg-[#e9f5f5] text-[#135d88] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center mb-6 gap-6 shadow-md">
       <div class="flex-1">
         <h3 class="font-bold text-sm md:text-base mb-1">Nikmati Diskon Spesial dan Pantau Pesanan Kamu</h3>
         <p class="text-xs md:text-sm text-[#3b7b9e]">Dapatkan diskon eksklusif sambil melacak pesanan dan percakapan kamu dengan mudah. Tetap terhubung dengan kami dan selalu tahu perkembangan pembelian kamu, semua dalam satu platform.</p>
       </div>
       <div class="flex gap-4 shrink-0">
-        <button onclick="openLoginModal()" class="border border-[#026197] text-[#026197] px-8 py-2.5 rounded-lg font-bold text-sm hover:bg-blue-50 transition-colors">Login</button>
-        <button onclick="openRegisterModal()" class="bg-[#137490] text-white px-8 py-2.5 rounded-lg font-bold text-sm hover:bg-[#024c75] transition-colors shadow-sm">Daftar</button>
+        <button onclick="openLoginModal()" class="border border-[#135d88] text-[#135d88] px-8 py-2.5 rounded-lg font-bold text-sm hover:bg-blue-50 transition-colors">Login</button>
+        <button onclick="openRegisterModal()" class="bg-[#137490] text-white px-8 py-2.5 rounded-lg font-bold text-sm hover:bg-[#0c577a] transition-colors shadow-sm">Daftar</button>
       </div>
     </div>
 
     <!-- Tabs Card -->
-    <div class="bg-[#e9f5f5] text-[#026197] rounded-2xl shadow-md overflow-hidden min-h-[400px]">
+    <div class="bg-[#e9f5f5] text-[#135d88] rounded-2xl shadow-md overflow-hidden min-h-[400px]">
       <!-- Tab Headers -->
       <div class="flex border-b border-gray-200">
-        <button onclick="switchTab('order')" id="tab-btn-order" class="flex-1 py-4 text-center font-bold text-sm border-b-2 border-[#026197] text-[#026197] transition-colors">Order</button>
-        <button onclick="switchTab('wishlist')" id="tab-btn-wishlist" class="flex-1 py-4 text-center font-bold text-sm border-b-2 border-transparent text-gray-500 hover:text-[#026197] transition-colors">Wishlist</button>
+        <button onclick="switchTab('order')" id="tab-btn-order" class="flex-1 py-4 text-center font-bold text-sm border-b-2 border-[#135d88] text-[#135d88] transition-colors">Order</button>
+        <button onclick="switchTab('wishlist')" id="tab-btn-wishlist" class="flex-1 py-4 text-center font-bold text-sm border-b-2 border-transparent text-gray-500 hover:text-[#135d88] transition-colors">Wishlist</button>
       </div>
 
       <!-- Tab Content: Order -->
@@ -122,7 +123,7 @@
         <div class="flex justify-between items-center mb-6">
           <h2 class="text-lg font-bold">My Order (0)</h2>
           <div class="relative">
-            <select class="appearance-none border border-[#026197] text-[#026197] bg-transparent rounded-md pl-4 pr-10 py-1.5 text-sm outline-none font-bold cursor-pointer">
+            <select class="appearance-none border border-[#135d88] text-[#135d88] bg-transparent rounded-md pl-4 pr-10 py-1.5 text-sm outline-none font-bold cursor-pointer">
               <option>All Status</option>
               <option>Delivered</option>
               <option>Packed</option>
@@ -130,15 +131,15 @@
               <option>Cancellation</option>
               <option>Return</option>
             </select>
-            <i class="ti ti-chevron-down absolute right-3 top-1/2 transform -translate-y-1/2 text-[#026197] pointer-events-none text-sm"></i>
+            <i class="ti ti-chevron-down absolute right-3 top-1/2 transform -translate-y-1/2 text-[#135d88] pointer-events-none text-sm"></i>
           </div>
         </div>
         
         <div class="flex flex-col items-center justify-center py-16 text-center">
           <i class="ti ti-lock text-6xl text-gray-400 mb-4 opacity-50"></i>
-          <h3 class="text-xl font-bold text-[#026197] mb-2">Anda Belum Login</h3>
+          <h3 class="text-xl font-bold text-[#135d88] mb-2">Anda Belum Login</h3>
           <p class="text-[#3b7b9e] mb-6">Anda harus login terlebih dahulu untuk melihat riwayat pesanan Anda.</p>
-          <button onclick="openLoginModal()" class="bg-[#026197] text-white px-8 py-2.5 rounded-lg font-bold text-sm hover:bg-[#024c75] transition-colors shadow-sm">Login Sekarang</button>
+          <button onclick="openLoginModal()" class="bg-[#135d88] text-white px-8 py-2.5 rounded-lg font-bold text-sm hover:bg-[#0c577a] transition-colors shadow-sm">Login Sekarang</button>
         </div>
       </div>
 
@@ -160,7 +161,7 @@
             </div>
             <div class="font-bold text-lg md:text-right w-full md:w-auto">Rp. 150.000,-</div>
             <div class="flex gap-3 w-full md:w-auto mt-2 md:mt-0">
-              <button class="flex-1 md:flex-none bg-[#026197] text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-[#024c75] transition-colors">Add to Cart</button>
+              <button class="flex-1 md:flex-none bg-[#135d88] text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-[#0c577a] transition-colors">Add to Cart</button>
               <button class="border border-red-500 text-red-500 px-4 py-2 rounded-lg text-sm font-bold hover:bg-red-50 transition-colors"><i class="ti ti-trash"></i></button>
             </div>
           </div>
@@ -175,7 +176,7 @@
             </div>
             <div class="font-bold text-lg md:text-right w-full md:w-auto">Rp. 150.000,-</div>
             <div class="flex gap-3 w-full md:w-auto mt-2 md:mt-0">
-              <button class="flex-1 md:flex-none bg-[#026197] text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-[#024c75] transition-colors">Add to Cart</button>
+              <button class="flex-1 md:flex-none bg-[#135d88] text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-[#0c577a] transition-colors">Add to Cart</button>
               <button class="border border-red-500 text-red-500 px-4 py-2 rounded-lg text-sm font-bold hover:bg-red-50 transition-colors"><i class="ti ti-trash"></i></button>
             </div>
           </div>
@@ -185,7 +186,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#026197] text-white pt-16 pb-12 mt-auto text-center relative w-full">
+  <footer class="bg-[#135d88] text-white pt-16 pb-12 mt-auto text-center relative w-full">
     <div class="mb-8">
       <i class="ti ti-brand-abstract text-5xl mb-4 inline-block"></i>
       <h2 class="text-2xl font-serif italic tracking-wider">Past<span class="font-sans font-bold not-italic">Over</span>Future</h2>
@@ -212,16 +213,16 @@
 
   <!-- Login Modal -->
   <div id="login-modal" class="fixed inset-0 bg-black/60 z-[200] hidden flex items-center justify-center backdrop-blur-sm px-4">
-    <div class="bg-[#f0f9f8] text-[#026197] rounded-3xl w-full max-w-[480px] p-8 md:p-10 relative shadow-2xl">
-      <button onclick="closeModals()" class="absolute top-6 right-6 text-gray-500 hover:text-[#026197] text-xl transition-colors"><i class="ti ti-x"></i></button>
+    <div class="bg-[#f0f9f8] text-[#135d88] rounded-3xl w-full max-w-[480px] p-8 md:p-10 relative shadow-2xl">
+      <button onclick="closeModals()" class="absolute top-6 right-6 text-gray-500 hover:text-[#135d88] text-xl transition-colors"><i class="ti ti-x"></i></button>
       <h2 class="text-2xl font-bold mb-8 text-center font-sans text-[#111]">Login</h2>
       <div class="mb-6">
-        <div class="flex items-center border border-gray-300 rounded-xl px-4 py-3 bg-white shadow-sm focus-within:border-[#026197] transition-colors">
+        <div class="flex items-center border border-gray-300 rounded-xl px-4 py-3 bg-white shadow-sm focus-within:border-[#135d88] transition-colors">
           <i class="ti ti-user text-gray-400 text-xl mr-3"></i>
           <input type="text" placeholder="Email / Phone Number" class="w-full outline-none font-sans text-sm text-[#111]">
         </div>
       </div>
-      <button class="w-full bg-[#0b6a93] text-white font-bold py-3.5 rounded-xl hover:bg-[#024c75] transition-colors mb-6 text-lg shadow-sm">Next</button>
+      <button class="w-full bg-[#0b6a93] text-white font-bold py-3.5 rounded-xl hover:bg-[#085577] transition-colors mb-6 text-lg shadow-sm">Next</button>
       <div class="text-center text-sm text-gray-500 mb-8">
         Dont have an account? <a href="#" onclick="openRegisterModal()" class="text-[#111] font-bold hover:underline">Register Here</a>
       </div>
@@ -233,20 +234,20 @@
 
   <!-- Register Modal -->
   <div id="register-modal" class="fixed inset-0 bg-black/60 z-[200] hidden flex items-center justify-center backdrop-blur-sm px-4">
-    <div class="bg-[#f0f9f8] text-[#026197] rounded-3xl w-full max-w-[480px] p-8 md:p-10 relative shadow-2xl">
-      <button onclick="closeModals()" class="absolute top-6 right-6 text-gray-500 hover:text-[#026197] text-xl transition-colors"><i class="ti ti-x"></i></button>
+    <div class="bg-[#f0f9f8] text-[#135d88] rounded-3xl w-full max-w-[480px] p-8 md:p-10 relative shadow-2xl">
+      <button onclick="closeModals()" class="absolute top-6 right-6 text-gray-500 hover:text-[#135d88] text-xl transition-colors"><i class="ti ti-x"></i></button>
       <h2 class="text-2xl font-bold mb-4 text-center font-sans text-[#111]">Register</h2>
       <p class="text-center text-sm text-gray-600 mb-8 px-4">Buat akun untuk menjadi anggota kami untuk mendapatkan poin, mendapatkan voucher gratis, dan mendengarkan berita kami lebih awal.</p>
       
       <div class="space-y-4 mb-6">
-        <div class="flex items-center border border-gray-300 rounded-xl px-4 py-3 bg-white shadow-sm focus-within:border-[#026197] transition-colors">
+        <div class="flex items-center border border-gray-300 rounded-xl px-4 py-3 bg-white shadow-sm focus-within:border-[#135d88] transition-colors">
           <input type="text" placeholder="Full Name (First and Last Name)*" class="w-full outline-none font-sans text-sm text-[#111]">
         </div>
-        <div class="flex items-center border border-gray-300 rounded-xl px-4 py-3 bg-white shadow-sm focus-within:border-[#026197] transition-colors">
+        <div class="flex items-center border border-gray-300 rounded-xl px-4 py-3 bg-white shadow-sm focus-within:border-[#135d88] transition-colors">
           <i class="ti ti-user text-gray-400 text-xl mr-3"></i>
           <input type="email" placeholder="Email" class="w-full outline-none font-sans text-sm text-[#111]">
         </div>
-        <div class="flex items-center border border-gray-300 rounded-xl px-4 py-3 bg-white shadow-sm focus-within:border-[#026197] transition-colors">
+        <div class="flex items-center border border-gray-300 rounded-xl px-4 py-3 bg-white shadow-sm focus-within:border-[#135d88] transition-colors">
           <i class="ti ti-lock text-gray-400 text-xl mr-3"></i>
           <input type="password" placeholder="Password" class="w-full outline-none font-sans text-sm text-[#111]">
         </div>
@@ -255,7 +256,7 @@
       <div class="text-center text-sm text-gray-500 mb-6">
         Already have an account? <a href="#" onclick="openLoginModal()" class="text-[#111] font-bold hover:underline">Login Here</a>
       </div>
-      <button class="w-full bg-[#0b6a93] text-white font-bold py-3.5 rounded-xl hover:bg-[#024c75] transition-colors mb-2 text-lg shadow-sm">Next</button>
+      <button class="w-full bg-[#0b6a93] text-white font-bold py-3.5 rounded-xl hover:bg-[#085577] transition-colors mb-2 text-lg shadow-sm">Next</button>
     </div>
   </div>
 
@@ -288,13 +289,13 @@
       if (tab === 'order') {
         orderTab.classList.remove('hidden');
         wishlistTab.classList.add('hidden');
-        btnOrder.className = 'flex-1 py-4 text-center font-bold text-sm border-b-2 border-[#026197] text-[#026197] transition-colors';
-        btnWishlist.className = 'flex-1 py-4 text-center font-bold text-sm border-b-2 border-transparent text-gray-500 hover:text-[#026197] transition-colors';
+        btnOrder.className = 'flex-1 py-4 text-center font-bold text-sm border-b-2 border-[#135d88] text-[#135d88] transition-colors';
+        btnWishlist.className = 'flex-1 py-4 text-center font-bold text-sm border-b-2 border-transparent text-gray-500 hover:text-[#135d88] transition-colors';
       } else {
         wishlistTab.classList.remove('hidden');
         orderTab.classList.add('hidden');
-        btnWishlist.className = 'flex-1 py-4 text-center font-bold text-sm border-b-2 border-[#026197] text-[#026197] transition-colors';
-        btnOrder.className = 'flex-1 py-4 text-center font-bold text-sm border-b-2 border-transparent text-gray-500 hover:text-[#026197] transition-colors';
+        btnWishlist.className = 'flex-1 py-4 text-center font-bold text-sm border-b-2 border-[#135d88] text-[#135d88] transition-colors';
+        btnOrder.className = 'flex-1 py-4 text-center font-bold text-sm border-b-2 border-transparent text-gray-500 hover:text-[#135d88] transition-colors';
       }
     }
 
