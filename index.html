@@ -94,17 +94,38 @@
   </nav>
 
   <section class="relative w-full h-[50vh] md:h-[80vh] bg-gray-900">
-    <div class="w-full h-full bg-cover bg-center" style="background-image: url('images/banner/heroslider ke1 -index.webp');">
+    <div id="index-hero-bg" class="w-full h-full bg-cover bg-center transition-all duration-700 ease-in-out" style="background-image: url('images/banner/heroslider ke1 -index.webp');">
       <div class="absolute inset-0 bg-black/20"></div>
     </div>
     
     <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
-      <div class="w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer hover:opacity-100 transition-opacity"></div>
-      <div class="w-2.5 h-2.5 rounded-full bg-white opacity-100 cursor-pointer"></div>
-      <div class="w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer hover:opacity-100 transition-opacity"></div>
-      <div class="w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer hover:opacity-100 transition-opacity"></div>
+      <div class="index-hero-dot w-2.5 h-2.5 rounded-full bg-white opacity-100 cursor-pointer" onclick="goToSlideIndex(0)"></div>
+      <div class="index-hero-dot w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer transition-opacity hover:opacity-100" onclick="goToSlideIndex(1)"></div>
+      <div class="index-hero-dot w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer transition-opacity hover:opacity-100" onclick="goToSlideIndex(2)"></div>
     </div>
   </section>
+
+  <script>
+    const indexHeroBg = document.getElementById('index-hero-bg');
+    const indexHeroDots = document.querySelectorAll('.index-hero-dot');
+    const indexSlides = [
+      'images/banner/heroslider ke1 -index.webp',
+      'images/banner/DSCF1117.webp',
+      'images/banner/DSCF1133.webp'
+    ];
+    let currentIndexSlide = 0;
+    function goToSlideIndex(index) {
+      currentIndexSlide = index;
+      if(indexHeroBg) indexHeroBg.style.backgroundImage = `url('${indexSlides[currentIndexSlide]}')`;
+      indexHeroDots.forEach((dot, i) => {
+        dot.classList.toggle('opacity-100', i === currentIndexSlide);
+        dot.classList.toggle('opacity-50', i !== currentIndexSlide);
+      });
+    }
+    setInterval(() => {
+      goToSlideIndex((currentIndexSlide + 1) % indexSlides.length);
+    }, 4000);
+  </script>
 
   <!-- Gambar 1-->
   <section class="w-full mt-8 md:mt-4 reveal">

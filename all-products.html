@@ -2800,30 +2800,48 @@
           class="absolute -top-2 -right-2 bg-[#E63C2F] text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full font-bold">3</span>
       </button>
     </div>
-  </nav>
+  </nav>  
   <!-- HERO FROM GEMINI (MODIFIED) -->
-  <section class="relative w-full h-[300px] md:h-[450px] bg-gray-900">
-    <div class="w-full h-full bg-cover bg-center"
+  <section class="relative w-full h-[60vh] md:h-[70vh] bg-gray-900">
+    <div id="allprod-hero-bg" class="w-full h-full bg-cover bg-center transition-all duration-700 ease-in-out"
       style="background-image: url('images/banner/heroslider1-allproduct.webp');">
       <div class="absolute inset-0 bg-black/40"></div>
     </div>
 
       <!-- Hero Slider dots -->
       <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        <div class="w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer hover:opacity-100 transition-opacity">
-        </div>
-        <div class="w-2.5 h-2.5 rounded-full bg-white opacity-100 cursor-pointer"></div>
-        <div class="w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer hover:opacity-100 transition-opacity">
-        </div>
-        <div class="w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer hover:opacity-100 transition-opacity">
-        </div>
+        <div class="allprod-hero-dot w-2.5 h-2.5 rounded-full bg-white opacity-100 cursor-pointer" onclick="goToSlideAllProd(0)"></div>
+        <div class="allprod-hero-dot w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer hover:opacity-100 transition-opacity" onclick="goToSlideAllProd(1)"></div>
+        <div class="allprod-hero-dot w-2.5 h-2.5 rounded-full bg-white opacity-50 cursor-pointer hover:opacity-100 transition-opacity" onclick="goToSlideAllProd(2)"></div>
       </div>
 
       <!-- Hero Text -->
       <div class="absolute bottom-12 left-8 md:bottom-16 md:left-12">
         <h1 class="text-5xl md:text-7xl font-bold text-white tracking-wide font-sans drop-shadow-lg">Jacket Series</h1>
       </div>
-    </section>
+  </section>
+
+  <script>
+    const allProdHeroBg = document.getElementById('allprod-hero-bg');
+    const allProdHeroDots = document.querySelectorAll('.allprod-hero-dot');
+    const allProdSlides = [
+      'images/banner/heroslider1-allproduct.webp',
+      'images/banner/DSCF1207.webp',
+      'images/banner/DSCF1133.webp'
+    ];
+    let currentAllProdSlide = 0;
+    function goToSlideAllProd(index) {
+      currentAllProdSlide = index;
+      if(allProdHeroBg) allProdHeroBg.style.backgroundImage = `url('${allProdSlides[currentAllProdSlide]}')`;
+      allProdHeroDots.forEach((dot, i) => {
+        dot.classList.toggle('opacity-100', i === currentAllProdSlide);
+        dot.classList.toggle('opacity-50', i !== currentAllProdSlide);
+      });
+    }
+    setInterval(() => {
+      goToSlideAllProd((currentAllProdSlide + 1) % allProdSlides.length);
+    }, 4000);
+  </script>
 
     <!-- MAIN CONTENT -->
     <main class="max-w-[1400px] mx-auto px-4 md:px-8 py-10 md:py-16 pt-8">
