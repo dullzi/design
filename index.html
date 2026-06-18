@@ -49,10 +49,90 @@
       <a href="all-products.html"
         class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">New
         Arrival</a>
-      <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Collection</a>
-      <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Categories</a>
+      <!-- Collection Accordion -->
+      <div class="flex flex-col">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180');" 
+          class="w-full px-4 py-3 text-left text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors flex justify-between items-center">
+          Collection
+          <i class="ti ti-chevron-down transition-transform duration-300"></i>
+        </button>
+        <div class="hidden">
+          <ul class="flex flex-col py-2 mt-1 mb-2 ml-6 pl-4 border-l-2 border-gray-100 space-y-1">
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Ametora Series
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Retro Athleisure
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Festival Grounds
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                City Nights
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Categories Accordion -->
+      <div class="flex flex-col">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180');" 
+          class="w-full px-4 py-3 text-left text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors flex justify-between items-center">
+          Categories
+          <i class="ti ti-chevron-down transition-transform duration-300"></i>
+        </button>
+        <div class="hidden">
+          <ul class="flex flex-col py-2 mt-1 mb-2 ml-6 pl-4 border-l-2 border-gray-100 space-y-1">
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Jacket Series
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                T-Shirt, Jersey, Hoodie
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Pants and Short
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Vest
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Pants
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Bag
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <a href="all-products.html"
         class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Sale</a>
     </div>
@@ -77,8 +157,61 @@
       <div class="hidden md:flex space-x-6 text-sm font-medium">
         <a href="all-products.html" class="hover:text-gray-300 transition-colors">Best Seller</a>
         <a href="all-products.html" class="hover:text-gray-300 transition-colors">New Arrival</a>
-        <a href="all-products.html" class="hover:text-gray-300 transition-colors">Collection</a>
-        <a href="all-products.html" class="hover:text-gray-300 transition-colors">Categories</a>
+        <!-- Collection Mega Menu -->
+        <div class="group">
+          <a href="all-products.html" class="hover:text-gray-300 transition-colors py-4">Collection</a>
+          
+          <div class="absolute left-0 top-full w-full bg-[#1C73A5] hidden group-hover:block shadow-xl border-t border-white/10 before:absolute before:-top-8 before:h-8 before:w-full before:bg-transparent">
+            <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-12 flex text-white gap-24 text-left">
+              <!-- Left Column -->
+              <div class="w-1/2">
+                <h3 class="text-[40px] font-bold mb-6 tracking-tight" style="letter-spacing: -0.04em;">Collection</h3>
+                <ul class="flex flex-col text-lg font-light">
+                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Ametora Series</a></li>
+                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Retro Athleisure</a></li>
+                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Festival Grounds</a></li>
+                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">City Nights</a></li>
+                </ul>
+              </div>
+              <!-- Right Column -->
+              <div class="w-1/2 pl-8">
+                <h3 class="text-[32px] font-bold mb-4 tracking-tight" style="letter-spacing: -0.04em;">2026 Seasonal Drop</h3>
+                <p class="text-[13px] text-gray-50 leading-relaxed max-w-sm text-justify font-light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories Mega Menu -->
+        <div class="group">
+          <a href="all-products.html" class="hover:text-gray-300 transition-colors py-4">Categories</a>
+          
+          <div class="absolute left-0 top-full w-full bg-[#1C73A5] hidden group-hover:block shadow-xl border-t border-white/10 before:absolute before:-top-8 before:h-8 before:w-full before:bg-transparent">
+            <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-12 flex text-white gap-24 text-left">
+              <!-- Left Column -->
+              <div class="w-1/2">
+                <h3 class="text-[40px] font-bold mb-6 tracking-tight" style="letter-spacing: -0.04em;">Categories</h3>
+                <ul class="flex flex-col text-lg font-light">
+                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Jacket Series</a></li>
+                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">T-Shirt, Jersey, Hoodie</a></li>
+                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Pants and Short</a></li>
+                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Vest</a></li>
+                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Pants</a></li>
+                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Bag</a></li>
+                </ul>
+              </div>
+              <!-- Right Column -->
+              <div class="w-1/2 pl-8">
+                <h3 class="text-[32px] font-bold mb-4 tracking-tight" style="letter-spacing: -0.04em;">Club of 1986</h3>
+                <p class="text-[13px] text-gray-50 leading-relaxed max-w-sm text-justify font-light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <a href="all-products.html" class="hover:text-gray-300 transition-colors">Sale</a>
       </div>
     </div>
@@ -128,7 +261,7 @@
   </script>
 
   <!-- Gambar 1-->
-  <section class="w-full mt-8 md:mt-4 reveal">
+  <section class="w-full mt-6 sm:mt-2 md:mt-4 reveal">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
       <div class="relative h-[600px] md:h-[800px] overflow-hidden md:col-span-2">
         <img src="images/banner/section gambar 1 bagian kiri -index.webp" alt="Models" fetchpriority="high" class="w-full h-full object-cover">
@@ -152,21 +285,71 @@
     </div>
   </section>
 
+  <!-- section category -->
   <section class="max-w-[1400px] mx-auto px-6 md:px-12 py-20 reveal">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24">
       <div class="text-brand-blue text-sm leading-loose text-justify font-medium">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
       </div>
 
-      <div>
-        <h3 class="text-brand-blue font-bold text-lg mb-6">Categories</h3>
-        <ul class="flex flex-col text-brand-blue text-sm font-medium">
-          <li class="border-b border-blue-200 py-3"><a href="all-products.html" class="hover:text-blue-900 transition-colors w-full block">Jacket /</a></li>
-          <li class="border-b border-blue-200 py-3"><a href="all-products.html" class="hover:text-blue-900 transition-colors w-full block">T-shirt /</a></li>
-          <li class="border-b border-blue-200 py-3"><a href="all-products.html" class="hover:text-blue-900 transition-colors w-full block">Pants /</a></li>
-          <li class="border-b border-blue-200 py-3"><a href="all-products.html" class="hover:text-blue-900 transition-colors w-full block">Hat /</a></li>
-          <li class="border-b border-blue-200 py-3"><a href="all-products.html" class="hover:text-blue-900 transition-colors w-full block">Bag /</a></li>
-        </ul>
+      <div class="md:col-span-2 flex flex-col justify-center space-y-4">
+        <!-- Categories Accordion -->
+        <div class="border-b border-blue-200">
+          <button onclick="toggleSectionAccordion('cat-content', 'cat-icon')" class="w-full py-4 flex justify-between items-center text-brand-blue hover:text-blue-800 transition-colors">
+            <h3 class="font-bold text-xl md:text-2xl">Categories</h3>
+            <i id="cat-icon" class="ti ti-minus text-xl transition-transform duration-300"></i>
+          </button>
+          <div id="cat-content" class="overflow-hidden transition-all duration-300 pb-4">
+            <div class="text-white p-6 md:p-8 rounded-xl flex flex-col md:flex-row gap-8 shadow-inner" style="background-color: #1C73A5;">
+              <!-- Left Column -->
+              <div class="w-full md:w-1/2">
+                <ul class="flex flex-col text-base font-light">
+                  <li class="border-b-[1.5px] border-white/30 py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Jacket Series</a></li>
+                  <li class="border-b-[1.5px] border-white/30 py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">T-Shirt, Jersey, Hoodie</a></li>
+                  <li class="border-b-[1.5px] border-white/30 py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Pants and Short</a></li>
+                  <li class="border-b-[1.5px] border-white/30 py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Vest</a></li>
+                  <li class="border-b-[1.5px] border-white/30 py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Pants</a></li>
+                  <li class="border-b-[1.5px] border-white/30 py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Bag</a></li>
+                </ul>
+              </div>
+              <!-- Right Column -->
+              <div class="w-full md:w-1/2 md:pl-4">
+                <h4 class="text-[28px] font-bold mb-4 tracking-tight" style="letter-spacing: -0.04em;">Club of 1986</h4>
+                <p class="text-[13px] text-gray-50 leading-relaxed text-justify font-light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati in, eius quibusdam necessitatibus nulla harum aut quia veritatis incidunt esse, excepturi soluta dolore suscipit possimus culpa omnis rerum, natus eligendi est labore? Numquam asperiores at similique laboriosam. Deleniti amet accusantium ipsa nostrum, reprehenderit mollitia vitae cumque vel ipsam veniam ab.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collection Accordion -->
+        <div class="border-b border-blue-200">
+          <button onclick="toggleSectionAccordion('col-content', 'col-icon')" class="w-full py-4 flex justify-between items-center text-brand-blue hover:text-blue-800 transition-colors">
+            <h3 class="font-bold text-xl md:text-2xl">Collection</h3>
+            <i id="col-icon" class="ti ti-plus text-xl transition-transform duration-300"></i>
+          </button>
+          <div id="col-content" class="hidden overflow-hidden transition-all duration-300 pb-4">
+            <div class="text-white p-6 md:p-8 rounded-xl flex flex-col md:flex-row gap-8 shadow-inner" style="background-color: #1C73A5;">
+              <!-- Left Column -->
+              <div class="w-full md:w-1/2">
+                <ul class="flex flex-col text-base font-light">
+                  <li class="border-b-[1.5px] border-white/30 py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Ametora Series</a></li>
+                  <li class="border-b-[1.5px] border-white/30 py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Retro Athleisure</a></li>
+                  <li class="border-b-[1.5px] border-white/30 py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Festival Grounds</a></li>
+                  <li class="border-b-[1.5px] border-white/30 py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">City Nights</a></li>
+                </ul>
+              </div>
+              <!-- Right Column -->
+              <div class="w-full md:w-1/2 md:pl-4">
+                <h4 class="text-[28px] font-bold mb-4 tracking-tight" style="letter-spacing: -0.04em;">2026 Seasonal Drop</h4>
+                <p class="text-[13px] text-gray-50 leading-relaxed text-justify font-light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo autem rerum non. Libero, officia. Sint, nisi voluptatum autem facere a tenetur est natus repellendus! Assumenda illo facere itaque hic eos?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -376,6 +559,26 @@
         overlay.classList.remove('opacity-100');
         setTimeout(() => overlay.classList.add('hidden'), 300);
       }
+    }
+
+    // Section Category Accordion
+    function toggleSectionAccordion(contentId, iconId) {
+      const allContents = ['cat-content', 'col-content'];
+      const allIcons = ['cat-icon', 'col-icon'];
+      
+      // Tutup semua bagian terlebih dahulu
+      allContents.forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+      });
+      allIcons.forEach(id => {
+        document.getElementById(id).classList.remove('ti-minus');
+        document.getElementById(id).classList.add('ti-plus');
+      });
+      
+      // Buka bagian yang dipilih
+      document.getElementById(contentId).classList.remove('hidden');
+      document.getElementById(iconId).classList.remove('ti-plus');
+      document.getElementById(iconId).classList.add('ti-minus');
     }
   </script>
 </body>
