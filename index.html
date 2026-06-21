@@ -157,61 +157,8 @@
       <div class="hidden md:flex space-x-6 text-sm font-medium">
         <a href="all-products.html" class="hover:text-gray-300 transition-colors">Best Seller</a>
         <a href="all-products.html" class="hover:text-gray-300 transition-colors">New Arrival</a>
-        <!-- Collection Mega Menu -->
-        <div class="group">
-          <a href="all-products.html" class="hover:text-gray-300 transition-colors py-4">Collection</a>
-          
-          <div class="absolute left-0 top-full w-full bg-[#1C73A5] hidden group-hover:block shadow-xl border-t border-white/10 before:absolute before:-top-8 before:h-8 before:w-full before:bg-transparent">
-            <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-12 flex text-white gap-24 text-left">
-              <!-- Left Column -->
-              <div class="w-1/2">
-                <h3 class="text-[40px] font-bold mb-6 tracking-tight" style="letter-spacing: -0.04em;">Collection</h3>
-                <ul class="flex flex-col text-lg font-light">
-                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Ametora Series</a></li>
-                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Retro Athleisure</a></li>
-                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Festival Grounds</a></li>
-                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">City Nights</a></li>
-                </ul>
-              </div>
-              <!-- Right Column -->
-              <div class="w-1/2 pl-8">
-                <h3 class="text-[32px] font-bold mb-4 tracking-tight" style="letter-spacing: -0.04em;">2026 Seasonal Drop</h3>
-                <p class="text-[13px] text-gray-50 leading-relaxed max-w-sm text-justify font-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Categories Mega Menu -->
-        <div class="group">
-          <a href="all-products.html" class="hover:text-gray-300 transition-colors py-4">Categories</a>
-          
-          <div class="absolute left-0 top-full w-full bg-[#1C73A5] hidden group-hover:block shadow-xl border-t border-white/10 before:absolute before:-top-8 before:h-8 before:w-full before:bg-transparent">
-            <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-12 flex text-white gap-24 text-left">
-              <!-- Left Column -->
-              <div class="w-1/2">
-                <h3 class="text-[40px] font-bold mb-6 tracking-tight" style="letter-spacing: -0.04em;">Categories</h3>
-                <ul class="flex flex-col text-lg font-light">
-                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Jacket Series</a></li>
-                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">T-Shirt, Jersey, Hoodie</a></li>
-                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Pants and Short</a></li>
-                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Vest</a></li>
-                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Pants</a></li>
-                  <li class="border-b-[1.5px] border-white py-3"><a href="all-products.html" class="hover:text-gray-200 transition-colors w-full block">Bag</a></li>
-                </ul>
-              </div>
-              <!-- Right Column -->
-              <div class="w-1/2 pl-8">
-                <h3 class="text-[32px] font-bold mb-4 tracking-tight" style="letter-spacing: -0.04em;">Club of 1986</h3>
-                <p class="text-[13px] text-gray-50 leading-relaxed max-w-sm text-justify font-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <a href="all-products.html" class="hover:text-gray-300 transition-colors">Collection</a>
+        <a href="all-products.html" class="hover:text-gray-300 transition-colors">Categories</a>
         <a href="all-products.html" class="hover:text-gray-300 transition-colors">Sale</a>
       </div>
     </div>
@@ -381,10 +328,6 @@
       <!-- Products will be injected here -->
     </div>
     
-    <div id="loadingSpinner" class="flex justify-center items-center py-8 opacity-0 transition-opacity">
-      <i class="ti ti-loader text-3xl text-[#0A6BAA] animate-spin"></i>
-    </div>
-
     <script>
       const allProductsData = [
         { name: "Vintage Denim Jacket", price: "Rp. 450.000,-", img: "images/product/section featured product -index.webp" },
@@ -408,23 +351,55 @@
       ];
 
       const gridContainer = document.getElementById('allProductGrid');
-      const spinner = document.getElementById('loadingSpinner');
       let currentItemsLoaded = 0;
-      const itemsPerLoad = 5;
+      const itemsPerLoad = 8;
+      let isLoading = false;
+
+      function renderSkeleton(count) {
+         let html = "";
+         for(let i=0; i<count; i++) {
+            html += `
+            <div class="border border-gray-200 rounded-lg overflow-hidden bg-white flex flex-col shadow-sm animate-pulse skeleton-item">
+              <div class="h-[200px] sm:h-[250px] bg-gray-200"></div>
+              <div class="p-3 flex flex-col flex-grow">
+                <div class="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                <div class="h-3 bg-gray-200 rounded w-1/2 mb-4"></div>
+                <div class="mt-auto flex gap-2 w-full">
+                  <div class="h-8 flex-1 bg-gray-200 rounded-md"></div>
+                  <div class="h-8 w-8 bg-gray-200 rounded-md flex-shrink-0"></div>
+                </div>
+              </div>
+            </div>
+            `;
+         }
+         return html;
+      }
 
       function loadItems() {
-        if (currentItemsLoaded >= allProductsData.length) return;
+        if (isLoading || currentItemsLoaded >= allProductsData.length) return;
+        isLoading = true;
         
-        spinner.classList.remove('opacity-0');
+        const nextCount = Math.min(itemsPerLoad, allProductsData.length - currentItemsLoaded);
         
+        // Add skeletons
+        if (currentItemsLoaded === 0) {
+          gridContainer.innerHTML = renderSkeleton(nextCount);
+        } else {
+          gridContainer.insertAdjacentHTML('beforeend', renderSkeleton(nextCount));
+        }
+
         // Simulate network delay for lazy loading effect
         setTimeout(() => {
+          // Remove skeletons
+          const skeletons = gridContainer.querySelectorAll('.skeleton-item');
+          skeletons.forEach(s => s.remove());
+
           const nextItems = allProductsData.slice(currentItemsLoaded, currentItemsLoaded + itemsPerLoad);
           
           let htmlString = "";
           nextItems.forEach((prod) => {
             htmlString += `
-              <div onclick="window.location.href='product-detail.html'" class="product-card border border-gray-200 rounded-lg overflow-hidden cursor-pointer bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col fade-in">
+              <div onclick="window.location.href='product-detail.html'" class="product-card border border-gray-200 rounded-lg overflow-hidden cursor-pointer bg-white shadow-sm hover:shadow-xl transition-all duration-500 ease-out flex flex-col opacity-0 translate-y-4 index-card-reveal">
                 <div class="h-[200px] sm:h-[250px] flex items-center justify-center bg-white">
                   <img src="${prod.img}" alt="${prod.name}" loading="lazy" class="w-full h-full object-contain mix-blend-multiply hover:scale-110 transition-transform duration-500">
                 </div>
@@ -445,39 +420,48 @@
           });
           
           gridContainer.insertAdjacentHTML('beforeend', htmlString);
-          currentItemsLoaded += itemsPerLoad;
           
-          if (currentItemsLoaded >= allProductsData.length) {
-            spinner.style.display = 'none';
-          } else {
-            spinner.classList.add('opacity-0');
+          // Trigger staggered reveal animation
+          setTimeout(() => {
+            const newCards = gridContainer.querySelectorAll('.index-card-reveal.opacity-0');
+            newCards.forEach((card, index) => {
+              setTimeout(() => {
+                card.classList.remove('opacity-0', 'translate-y-4');
+              }, index * 80); // 80ms stagger between cards
+            });
+          }, 50);
+
+          currentItemsLoaded += nextCount;
+          isLoading = false;
+
+          // Observe the last element to load more when scrolled into view
+          if (currentItemsLoaded < allProductsData.length) {
+             observeLastElement();
           }
-        }, 800); // 800ms fake delay to show spinner
+        }, 800); // 800ms fake delay
+      }
+
+      function observeLastElement() {
+        const cards = gridContainer.querySelectorAll('.index-card-reveal');
+        const lastCard = cards[cards.length - 1];
+        
+        if (!lastCard) return;
+
+        const observer = new IntersectionObserver((entries, obs) => {
+          if (entries[0].isIntersecting) {
+            obs.unobserve(lastCard);
+            loadItems();
+          }
+        }, { rootMargin: "200px" });
+
+        observer.observe(lastCard);
       }
 
       // Initial load
-      loadItems();
-
-      // Intersection Observer for Infinite Scroll
-      const infiniteScrollObserver = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting && currentItemsLoaded < allProductsData.length) {
-          loadItems();
-        }
-      }, { rootMargin: "100px" });
-
-      infiniteScrollObserver.observe(spinner);
+      document.addEventListener("DOMContentLoaded", () => {
+        loadItems();
+      });
     </script>
-
-    <style>
-      .fade-in {
-        animation: fadeIn 0.5s ease-in forwards;
-        opacity: 0;
-      }
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-    </style>
   </section>
 
   <div class="fixed bottom-6 right-6 z-50">

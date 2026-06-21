@@ -70,10 +70,90 @@
       <a href="all-products.html"
         class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">New
         Arrival</a>
-      <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Collection</a>
-      <a href="all-products.html"
-        class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Categories</a>
+      <!-- Collection Accordion -->
+      <div class="flex flex-col">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180');" 
+          class="w-full px-4 py-3 text-left text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors flex justify-between items-center">
+          Collection
+          <i class="ti ti-chevron-down transition-transform duration-300"></i>
+        </button>
+        <div class="hidden">
+          <ul class="flex flex-col py-2 mt-1 mb-2 ml-6 pl-4 border-l-2 border-gray-100 space-y-1">
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Ametora Series
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Retro Athleisure
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Festival Grounds
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                City Nights
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Categories Accordion -->
+      <div class="flex flex-col">
+        <button onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180');" 
+          class="w-full px-4 py-3 text-left text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors flex justify-between items-center">
+          Categories
+          <i class="ti ti-chevron-down transition-transform duration-300"></i>
+        </button>
+        <div class="hidden">
+          <ul class="flex flex-col py-2 mt-1 mb-2 ml-6 pl-4 border-l-2 border-gray-100 space-y-1">
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Jacket Series
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                T-Shirt, Jersey, Hoodie
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Pants and Short
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Vest
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Pants
+              </a>
+            </li>
+            <li>
+              <a href="all-products.html" class="flex items-center text-[15px] font-medium text-gray-600 hover:text-[#0A6BAA] py-2 px-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-gray-300 mr-3"></span>
+                Bag
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <a href="all-products.html"
         class="px-4 py-3 text-gray-800 font-medium font-sans rounded-lg hover:bg-blue-50 hover:text-[#0A6BAA] transition-colors">Sale</a>
     </div>
@@ -111,9 +191,9 @@
   </nav>
 
   <!-- Main Cart Content -->
-  <main class="w-full max-w-[1200px] mx-auto px-4 md:px-10 pt-32 pb-10 flex-grow">
-    <div class="mb-10">
-      <h1 class="font-sans font-bold text-5xl md:text-6xl text-[#135d88] mb-8">Your Cart</h1>
+  <main class="w-full max-w-[1000px] mx-auto px-4 md:px-8 pt-24 md:pt-32 pb-10 flex-grow">
+    <div class="mb-8">
+      <h1 class="font-sans font-bold text-4xl md:text-5xl text-[#135d88] mb-6">Your Cart</h1>
     </div>
 
     <!-- Desktop Table Header -->
@@ -126,49 +206,49 @@
     <!-- Cart Items -->
     <div class="flex flex-col border-b border-[#135d88]/20 mb-8">
       <!-- Item 1 -->
-      <div class="grid grid-cols-1 md:grid-cols-[12fr_3fr_3fr] gap-4 py-6 border-t border-[#135d88]/20 items-center px-2">
-        <div class="flex gap-6 items-center">
-          <div class="w-32 md:w-40 aspect-square border border-gray-200 rounded-xl overflow-hidden flex-shrink-0 bg-white p-2 shadow-sm">
+      <div class="grid grid-cols-1 md:grid-cols-[12fr_3fr_3fr] gap-4 py-5 border-t border-[#135d88]/20 items-center px-2">
+        <div class="flex gap-4 md:gap-6 items-center">
+          <div class="w-24 md:w-32 aspect-square border border-gray-200 rounded-xl overflow-hidden flex-shrink-0 bg-white p-2 shadow-sm">
             <img src="images/product/foto jacket 1 -allproduct.webp" class="w-full h-full object-contain" alt="Kazuma Bomber Jacket">
           </div>
           <div class="flex flex-col justify-center">
-            <h3 class="font-sans font-bold text-xl md:text-2xl text-[#135d88] mb-1">Kazuma<br>Bomber Jacket</h3>
-            <p class="font-sans text-[#135d88] mb-1">Rp. 150.000,-</p>
-            <p class="font-sans text-[#135d88]">Size : L</p>
+            <h3 class="font-sans font-bold text-lg md:text-xl text-[#135d88] mb-1">Kazuma<br>Bomber Jacket</h3>
+            <p class="font-sans text-sm md:text-base text-[#135d88] mb-0.5">Rp. 150.000,-</p>
+            <p class="font-sans text-xs md:text-sm text-[#135d88]">Size : L</p>
           </div>
         </div>
-        <div class="flex items-center justify-center md:justify-center gap-4 mt-4 md:mt-0">
+        <div class="flex items-center justify-center md:justify-center gap-4 mt-3 md:mt-0">
           <div class="flex items-center border border-gray-300 rounded-md overflow-hidden bg-white">
-            <button class="w-10 h-10 flex items-center justify-center text-gray-500 hover:bg-gray-50 border-r border-gray-300 transition-colors text-lg" onclick="updateQty(this, -1)"><i class="ti ti-minus"></i></button>
-            <input type="text" value="1" class="w-16 h-10 text-center border-none font-sans text-lg text-black outline-none bg-transparent" readonly>
-            <button class="w-10 h-10 flex items-center justify-center text-gray-500 hover:bg-gray-50 border-l border-gray-300 transition-colors text-lg" onclick="updateQty(this, 1)"><i class="ti ti-plus"></i></button>
+            <button class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-gray-500 hover:bg-gray-50 border-r border-gray-300 transition-colors text-base md:text-lg" onclick="updateQty(this, -1)"><i class="ti ti-minus"></i></button>
+            <input type="text" value="1" class="w-12 h-8 md:w-14 md:h-10 text-center border-none font-sans text-base md:text-lg text-black outline-none bg-transparent" readonly>
+            <button class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-gray-500 hover:bg-gray-50 border-l border-gray-300 transition-colors text-base md:text-lg" onclick="updateQty(this, 1)"><i class="ti ti-plus"></i></button>
           </div>
-          <button class="text-gray-400 hover:text-red-500 transition-colors" title="Hapus dari Cart"><i class="ti ti-trash text-2xl"></i></button>
+          <button class="text-gray-400 hover:text-red-500 transition-colors" title="Hapus dari Cart"><i class="ti ti-trash text-xl md:text-2xl"></i></button>
         </div>
-        <div class="font-sans text-lg text-[#135d88] text-right mt-2 md:mt-0">Rp. 150.000,-</div>
+        <div class="font-sans text-base md:text-lg text-[#135d88] text-right mt-2 md:mt-0">Rp. 150.000,-</div>
       </div>
     
       <!-- Item 2 -->
-      <div class="grid grid-cols-1 md:grid-cols-[12fr_3fr_3fr] gap-4 py-6 border-t border-[#135d88]/20 items-center px-2">
-        <div class="flex gap-6 items-center">
-          <div class="w-32 md:w-40 aspect-square border border-gray-200 rounded-xl overflow-hidden flex-shrink-0 bg-white p-2 shadow-sm">
+      <div class="grid grid-cols-1 md:grid-cols-[12fr_3fr_3fr] gap-4 py-5 border-t border-[#135d88]/20 items-center px-2">
+        <div class="flex gap-4 md:gap-6 items-center">
+          <div class="w-24 md:w-32 aspect-square border border-gray-200 rounded-xl overflow-hidden flex-shrink-0 bg-white p-2 shadow-sm">
             <img src="images/product/kaos -allprodcut.webp" class="w-full h-full object-contain" alt="Tamiya Tshirt">
           </div>
           <div class="flex flex-col justify-center">
-            <h3 class="font-sans font-bold text-xl md:text-2xl text-[#135d88] mb-1">Tamiya Tshirt</h3>
-            <p class="font-sans text-[#135d88] mb-1">Rp. 150.000,-</p>
-            <p class="font-sans text-[#135d88]">Size : L</p>
+            <h3 class="font-sans font-bold text-lg md:text-xl text-[#135d88] mb-1">Tamiya Tshirt</h3>
+            <p class="font-sans text-sm md:text-base text-[#135d88] mb-0.5">Rp. 150.000,-</p>
+            <p class="font-sans text-xs md:text-sm text-[#135d88]">Size : L</p>
           </div>
         </div>
-        <div class="flex items-center justify-center md:justify-center gap-4 mt-4 md:mt-0">
+        <div class="flex items-center justify-center md:justify-center gap-4 mt-3 md:mt-0">
           <div class="flex items-center border border-gray-300 rounded-md overflow-hidden bg-white">
-            <button class="w-10 h-10 flex items-center justify-center text-gray-500 hover:bg-gray-50 border-r border-gray-300 transition-colors text-lg" onclick="updateQty(this, -1)"><i class="ti ti-minus"></i></button>
-            <input type="text" value="1" class="w-16 h-10 text-center border-none font-sans text-lg text-black outline-none bg-transparent" readonly>
-            <button class="w-10 h-10 flex items-center justify-center text-gray-500 hover:bg-gray-50 border-l border-gray-300 transition-colors text-lg" onclick="updateQty(this, 1)"><i class="ti ti-plus"></i></button>
+            <button class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-gray-500 hover:bg-gray-50 border-r border-gray-300 transition-colors text-base md:text-lg" onclick="updateQty(this, -1)"><i class="ti ti-minus"></i></button>
+            <input type="text" value="1" class="w-12 h-8 md:w-14 md:h-10 text-center border-none font-sans text-base md:text-lg text-black outline-none bg-transparent" readonly>
+            <button class="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-gray-500 hover:bg-gray-50 border-l border-gray-300 transition-colors text-base md:text-lg" onclick="updateQty(this, 1)"><i class="ti ti-plus"></i></button>
           </div>
-          <button class="text-gray-400 hover:text-red-500 transition-colors" title="Hapus dari Cart"><i class="ti ti-trash text-2xl"></i></button>
+          <button class="text-gray-400 hover:text-red-500 transition-colors" title="Hapus dari Cart"><i class="ti ti-trash text-xl md:text-2xl"></i></button>
         </div>
-        <div class="font-sans text-lg text-[#135d88] text-right mt-2 md:mt-0">Rp. 150.000,-</div>
+        <div class="font-sans text-base md:text-lg text-[#135d88] text-right mt-2 md:mt-0">Rp. 150.000,-</div>
       </div>
     </div>
 
@@ -176,9 +256,9 @@
     <div class="flex flex-col items-end w-full mb-10 text-[#135d88] px-2">
       <div class="flex flex-col items-end gap-1 mb-2">
         <span class="text-xs tracking-wide">Sub Total</span>
-        <span class="text-2xl md:text-3xl font-bold font-sans">Rp. 300.000,-</span>
+        <span class="text-xl md:text-2xl font-bold font-sans">Rp. 300.000,-</span>
       </div>
-      <span class="text-xs mb-4">Taxes and shipping calculated at checkout</span>
+      <span class="text-xs mb-4 text-gray-500">Taxes and shipping calculated at checkout</span>
       <button class="bg-[#135d88] text-white font-bold py-3 px-12 rounded hover:bg-[#0f4d71] transition-colors text-center text-sm w-full max-w-[280px]">
         Check Out
       </button>
