@@ -264,14 +264,16 @@
   <!-- Gambar 1-->
   <section class="w-full mt-6 sm:mt-2 md:mt-4 reveal">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
-      <div class="relative h-[600px] md:h-[800px] overflow-hidden md:col-span-2">
+      <div class="relative h-[600px] md:h-[800px] overflow-hidden md:col-span-2 group">
         <img src="images/banner/section gambar 1 bagian kiri -index.webp" alt="Models" fetchpriority="high"
-          class="w-full h-full object-cover">
+          class="w-full h-full object-cover group-hover:scale-150 transition-transform duration-700">
       </div>
 
-      <div
-        class="relative h-[600px] md:h-[800px] flex flex-col justify-end bg-cover bg-center p-8 md:p-12 overflow-hidden md:col-span-1"
-        style="background-image: url('images/banner/section gambar 1 bagian kanan -index.webp');">
+      <div class="relative h-[600px] md:h-[800px] overflow-hidden md:col-span-1 group">
+        <img src="images/banner/section gambar 1 bagian kanan -index.webp" alt="Models" fetchpriority="high"
+          class="absolute inset-0 w-full h-full object-cover group-hover:scale-150 transition-transform duration-700">
+        <div class="relative z-10 h-full flex flex-col justify-end p-8 md:p-12">
+        </div>
       </div>
     </div>
   </section>
@@ -383,7 +385,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
       <div class="relative h-[500px] md:h-[700px] group overflow-hidden bg-black">
         <img src="images/banner/section gambar 2 bagian kiri -index.webp" alt="Best Seller Jacket" loading="lazy"
-          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-150 opacity-90 group-hover:opacity-100">
         <div class="absolute bottom-8 right-8 text-white text-xl font-semibold tracking-widest drop-shadow-md">
           Best Seller
         </div>
@@ -391,7 +393,7 @@
 
       <div class="relative h-[500px] md:h-[700px] group overflow-hidden bg-black">
         <img src="images/banner/section gambar 2 bagian kanan -index.webp" alt="Sale Items" loading="lazy"
-          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-150 opacity-90 group-hover:opacity-100">
         <div class="absolute bottom-8 left-8 text-white text-xl font-semibold tracking-widest drop-shadow-md">
           Sale
         </div>
@@ -422,8 +424,8 @@
         .featured-price { font-size: 13px; }
       }
     </style>
-    <div class="hide-scrollbar overflow-x-auto pb-2 -mx-6 px-6 md:mx-0 md:px-0 snap-x snap-mandatory">
-      <div id="featuredProductContainer" class="flex flex-nowrap gap-3 md:gap-5 w-max">
+    <div class="hide-scrollbar overflow-x-auto pb-4 pt-2 -mx-6 px-6 md:-mx-4 md:px-4 snap-x snap-mandatory">
+      <div id="featuredProductContainer" class="flex flex-nowrap gap-3 md:gap-5 w-max pr-4 md:pr-8">
         <!-- Products will be injected here -->
       </div>
     </div>
@@ -458,8 +460,8 @@
               <i class="ti ti-heart text-sm md:text-base"></i>
             </button>
 
-            <div class="featured-img-height flex items-center justify-center bg-white mb-3 md:mb-4">
-              <img src="${prod.img}" alt="${prod.name}" loading="lazy" class="w-full h-full object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500">
+            <div class="featured-img-height flex items-center justify-center bg-white mb-3 md:mb-4 overflow-hidden">
+              <img src="${prod.img}" alt="${prod.name}" loading="lazy" class="w-full h-full object-contain mix-blend-multiply hover:scale-150 transition-transform duration-500">
             </div>
             <div class="flex flex-col text-left flex-grow">
               <div class="font-bold text-[#0A6BAA] mb-0.5 featured-title">${prod.name}</div>
