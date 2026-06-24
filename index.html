@@ -409,19 +409,44 @@
       .hide-scrollbar::-webkit-scrollbar {
         display: none;
       }
+
       .hide-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
       }
-      .featured-card-width { width: 160px; }
-      .featured-img-height { height: 140px; }
-      .featured-title { font-size: 12px; }
-      .featured-price { font-size: 11px; }
+
+      .featured-card-width {
+        width: 160px;
+      }
+
+      .featured-img-height {
+        height: 140px;
+      }
+
+      .featured-title {
+        font-size: 12px;
+      }
+
+      .featured-price {
+        font-size: 11px;
+      }
+
       @media (min-width: 768px) {
-        .featured-card-width { width: 250px; }
-        .featured-img-height { height: 200px; }
-        .featured-title { font-size: 14px; }
-        .featured-price { font-size: 13px; }
+        .featured-card-width {
+          width: 250px;
+        }
+
+        .featured-img-height {
+          height: 200px;
+        }
+
+        .featured-title {
+          font-size: 14px;
+        }
+
+        .featured-price {
+          font-size: 13px;
+        }
       }
     </style>
     <div class="hide-scrollbar overflow-x-auto pb-4 pt-2 -mx-6 px-6 md:-mx-4 md:px-4 snap-x snap-mandatory">
@@ -431,8 +456,8 @@
     </div>
 
     <div class="flex flex-row justify-between items-start mt-2">
-      <a href="all-products.html"
-        class="text-[#0A6BAA] font-bold hover:text-blue-800 transition-colors" style="font-size: 13px;">Show All</a>
+      <a href="all-products.html" class="text-[#0A6BAA] font-bold hover:text-blue-800 transition-colors"
+        style="font-size: 13px;">Show All</a>
       <div class="text-right text-[#0A6BAA] font-medium leading-[1.4]" style="font-size: 12px;">
         Provides you<br>an Authentic Dailywear<br>That were designed from 1986
       </div>
@@ -460,8 +485,8 @@
               <i class="ti ti-heart text-sm md:text-base"></i>
             </button>
 
-            <div class="featured-img-height flex items-center justify-center bg-white mb-3 md:mb-4 overflow-hidden">
-              <img src="${prod.img}" alt="${prod.name}" loading="lazy" class="w-full h-full object-contain mix-blend-multiply hover:scale-150 transition-transform duration-500">
+            <div class="featured-img-height flex items-center justify-center bg-white mb-3 md:mb-4 overflow-hidden relative group" onmousemove="zoomFollow(event, this)" onmouseleave="zoomReset(this)">
+              <img src="${prod.img}" alt="${prod.name}" loading="lazy" class="w-full h-full object-contain mix-blend-multiply group-hover:scale-150 transition-transform duration-300 ease-out origin-center">
             </div>
             <div class="flex flex-col text-left flex-grow">
               <div class="font-bold text-[#0A6BAA] mb-0.5 featured-title">${prod.name}</div>
@@ -712,6 +737,20 @@
       document.getElementById(contentId).classList.remove('hidden');
       document.getElementById(iconId).classList.remove('ti-plus');
       document.getElementById(iconId).classList.add('ti-minus');
+    }
+
+    // Zoom Follow functionality
+    function zoomFollow(event, container) {
+      const img = container.querySelector('img');
+      const rect = container.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      img.style.transformOrigin = `${x}% ${y}%`;
+    }
+
+    function zoomReset(container) {
+      const img = container.querySelector('img');
+      img.style.transformOrigin = 'center center';
     }
   </script>
 </body>

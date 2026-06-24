@@ -3171,9 +3171,9 @@
           let isLoading = false;
 
           function renderSkeleton(count) {
-             let html = "";
-             for(let i=0; i<count; i++) {
-                html += `
+            let html = "";
+            for (let i = 0; i < count; i++) {
+              html += `
                 <div class="border border-gray-200 rounded-lg overflow-hidden bg-white flex flex-col shadow-sm animate-pulse skeleton-item">
                   <div class="h-[160px] sm:h-[250px] bg-gray-200"></div>
                   <div class="p-3 sm:p-4 flex flex-col flex-grow">
@@ -3183,20 +3183,20 @@
                   </div>
                 </div>
                 `;
-             }
-             return html;
+            }
+            return html;
           }
 
           function createProductHTML(p) {
-              let priceHtml = p.oldPrice
-                ? `<div class="text-[11px] text-gray-400 line-through">${p.price}</div>
+            let priceHtml = p.oldPrice
+              ? `<div class="text-[11px] text-gray-400 line-through">${p.price}</div>
                  <div class="text-[13px] text-[#0A6BAA] font-bold">${p.oldPrice}</div>`
-                : `<div class="text-[13px] text-[#0A6BAA] font-bold mt-1">${p.price}</div>`;
+              : `<div class="text-[13px] text-[#0A6BAA] font-bold mt-1">${p.price}</div>`;
 
-              return `
+            return `
               <div onclick="window.location.href='product-detail.html'" class="border border-gray-300 rounded-lg overflow-hidden bg-white flex flex-col hover:shadow-lg transition-shadow cursor-pointer opacity-0 translate-y-4 transition-all duration-500 ease-out product-card-reveal group">
-                <div class="h-[160px] sm:h-[250px] flex items-center justify-center overflow-hidden ${p.bg}">
-                  <img src="${p.img}" alt="${p.name}" loading="lazy" class="w-full h-full object-contain mix-blend-multiply drop-shadow-sm group-hover:scale-150 transition-transform duration-500">
+                <div class="h-[160px] sm:h-[250px] flex items-center justify-center overflow-hidden relative ${p.bg}" onmousemove="zoomFollow(event, this)" onmouseleave="zoomReset(this)">
+                  <img src="${p.img}" alt="${p.name}" loading="lazy" class="w-full h-full object-contain mix-blend-multiply drop-shadow-sm group-hover:scale-150 transition-transform duration-300 ease-out origin-center">
                 </div>
                 <div class="p-3 sm:p-4 flex flex-col flex-grow">
                   <div class="text-[14px] font-bold text-[#0A6BAA] mb-1 font-sans">${p.name}</div>
@@ -3214,12 +3214,12 @@
           function loadProducts() {
             if (isLoading || currentPage * itemsPerPage >= productsAll.length) return;
             isLoading = true;
-            
+
             const container = document.getElementById('product-container');
             const start = currentPage * itemsPerPage;
             const end = Math.min(start + itemsPerPage, productsAll.length);
             const itemsToLoad = end - start;
-            
+
             // Add skeletons
             if (currentPage === 0) {
               container.innerHTML = renderSkeleton(itemsToLoad);
@@ -3232,16 +3232,16 @@
               // Remove skeletons
               const skeletons = container.querySelectorAll('.skeleton-item');
               skeletons.forEach(s => s.remove());
-              
+
               // Generate new product HTML
               let newHtml = "";
               for (let i = start; i < end; i++) {
                 newHtml += createProductHTML(productsAll[i]);
               }
-              
+
               // Append to container
               container.insertAdjacentHTML('beforeend', newHtml);
-              
+
               // Trigger staggered reveal animation
               setTimeout(() => {
                 const newCards = container.querySelectorAll('.product-card-reveal.opacity-0');
@@ -3257,7 +3257,7 @@
 
               // Observe the last element to load more when scrolled into view
               if (currentPage * itemsPerPage < productsAll.length) {
-                 observeLastElement();
+                observeLastElement();
               }
             }, 1000); // 1-second simulated delay
           }
@@ -3266,7 +3266,7 @@
             const container = document.getElementById('product-container');
             const cards = container.querySelectorAll('.product-card-reveal');
             const lastCard = cards[cards.length - 1];
-            
+
             if (!lastCard) return;
 
             const observer = new IntersectionObserver((entries, obs) => {
@@ -3679,26 +3679,32 @@
     </div>
 
     <!-- Floating Button (Halo effect) -->
-    <div
-      class="relative flex items-center justify-center cursor-pointer"
-      onclick="toggleCartWidget()" style="width: 72px; height: 72px; border-radius: 50%; background-color: rgba(10,107,170,0.15); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    <div class="relative flex items-center justify-center cursor-pointer" onclick="toggleCartWidget()"
+      style="width: 72px; height: 72px; border-radius: 50%; background-color: rgba(10,107,170,0.15); transition: transform 0.3s;"
+      onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
       <!-- Inner Button -->
       <button id="floating-cart-btn"
-        class="relative text-white flex items-center justify-center z-10 transition-colors duration-300 hover:bg-[#085d96]" style="width: 56px; height: 56px; border-radius: 50%; background-color: #0A6BAA; box-shadow: 0 8px 24px rgba(10,107,170,0.4); border: none; cursor: pointer;">
-        
+        class="relative text-white flex items-center justify-center z-10 transition-colors duration-300 hover:bg-[#085d96]"
+        style="width: 56px; height: 56px; border-radius: 50%; background-color: #0A6BAA; box-shadow: 0 8px 24px rgba(10,107,170,0.4); border: none; cursor: pointer;">
+
         <!-- Professional SVG Bag Icon -->
-        <svg id="widget-icon-cart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="absolute" style="width: 28px; height: 28px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); transform: scale(1); opacity: 1;">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+        <svg id="widget-icon-cart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentColor" class="absolute"
+          style="width: 28px; height: 28px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); transform: scale(1); opacity: 1;">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
         </svg>
 
         <!-- Close Icon (Hidden by default) -->
-        <svg id="widget-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="absolute" style="width: 28px; height: 28px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); transform: scale(0); opacity: 0;">
+        <svg id="widget-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="2.5" stroke="currentColor" class="absolute"
+          style="width: 28px; height: 28px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); transform: scale(0); opacity: 0;">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
 
         <!-- Notification Badge Fixed -->
-        <span
-          class="absolute font-bold text-white flex items-center justify-center" style="top: -2px; right: -2px; background-color: #E63C2F; width: 22px; height: 22px; border-radius: 50%; border: 2px solid #fff; font-size: 11px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); line-height: 1; padding: 0; margin: 0;">3</span>
+        <span class="absolute font-bold text-white flex items-center justify-center"
+          style="top: -2px; right: -2px; background-color: #E63C2F; width: 22px; height: 22px; border-radius: 50%; border: 2px solid #fff; font-size: 11px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); line-height: 1; padding: 0; margin: 0;">3</span>
       </button>
     </div>
   </div>
@@ -3708,16 +3714,16 @@
       const widget = document.getElementById('cart-widget-window');
       const iconCart = document.getElementById('widget-icon-cart');
       const iconClose = document.getElementById('widget-icon-close');
-      
+
       const isClosed = widget.style.transform === 'scale(0)' || widget.classList.contains('scale-0');
-      
+
       if (isClosed) {
         // Open widget
         widget.style.transform = 'scale(1)';
         widget.style.opacity = '1';
         widget.style.pointerEvents = 'auto';
         widget.classList.remove('scale-0', 'opacity-0', 'pointer-events-none'); // Cleanup old classes if present
-        
+
         // Switch icon to X
         iconCart.style.transform = 'scale(0) rotate(-90deg)';
         iconCart.style.opacity = '0';
@@ -3728,7 +3734,7 @@
         widget.style.transform = 'scale(0)';
         widget.style.opacity = '0';
         widget.style.pointerEvents = 'none';
-        
+
         // Switch icon back to Cart
         iconClose.style.transform = 'scale(0) rotate(90deg)';
         iconClose.style.opacity = '0';
@@ -3736,7 +3742,7 @@
         iconCart.style.opacity = '1';
       }
     }
-    
+
     // Initialize styles on load
     document.addEventListener('DOMContentLoaded', () => {
       const widget = document.getElementById('cart-widget-window');
@@ -3745,8 +3751,21 @@
       widget.style.pointerEvents = 'none';
       widget.style.transformOrigin = 'bottom right';
     });
-  </script>
 
+    // Zoom Follow functionality
+    function zoomFollow(event, container) {
+      const img = container.querySelector('img');
+      const rect = container.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      img.style.transformOrigin = `${x}% ${y}%`;
+    }
+
+    function zoomReset(container) {
+      const img = container.querySelector('img');
+      img.style.transformOrigin = 'center center';
+    }
+  </script>
 </body>
 
 </html>
