@@ -3195,8 +3195,8 @@
 
             return `
               <div onclick="window.location.href='product-detail.html'" class="border border-gray-300 rounded-lg overflow-hidden bg-white flex flex-col hover:shadow-lg transition-shadow cursor-pointer opacity-0 translate-y-4 transition-all duration-500 ease-out product-card-reveal group">
-                <div class="h-[160px] sm:h-[250px] flex items-center justify-center overflow-hidden relative ${p.bg}" onmousemove="zoomFollow(event, this)" onmouseleave="zoomReset(this)">
-                  <img src="${p.img}" alt="${p.name}" loading="lazy" class="w-full h-full object-contain mix-blend-multiply drop-shadow-sm group-hover:scale-150 transition-transform duration-300 ease-out origin-center">
+                <div class="h-[160px] sm:h-[250px] flex items-center justify-center overflow-hidden ${p.bg}">
+                  <img src="${p.img}" alt="${p.name}" loading="lazy" class="w-full h-full object-contain mix-blend-multiply drop-shadow-sm transition-transform duration-500">
                 </div>
                 <div class="p-3 sm:p-4 flex flex-col flex-grow">
                   <div class="text-[14px] font-bold text-[#0A6BAA] mb-1 font-sans">${p.name}</div>
@@ -3751,20 +3751,6 @@
       widget.style.pointerEvents = 'none';
       widget.style.transformOrigin = 'bottom right';
     });
-
-    // Zoom Follow functionality
-    function zoomFollow(event, container) {
-      const img = container.querySelector('img');
-      const rect = container.getBoundingClientRect();
-      const x = ((event.clientX - rect.left) / rect.width) * 100;
-      const y = ((event.clientY - rect.top) / rect.height) * 100;
-      img.style.transformOrigin = `${x}% ${y}%`;
-    }
-
-    function zoomReset(container) {
-      const img = container.querySelector('img');
-      img.style.transformOrigin = 'center center';
-    }
   </script>
 </body>
 

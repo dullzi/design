@@ -212,23 +212,23 @@
     <div class="w-full md:w-[60%] flex flex-col gap-0 mt-10">
       
       <!-- Main Large Image -->
-      <div class="w-full mt-20 aspect-[4/5] sm:aspect-square md:aspect-[3/4] bg-gray-100 overflow-hidden relative ">
-        <img src="images/product/main large image - productdetail.webp" alt="Rachi Workwear Jacket Main" class="w-full h-full object-cover">
+      <div class="w-full mt-20 aspect-[4/5] sm:aspect-square md:aspect-[3/4] bg-gray-100 overflow-hidden relative group cursor-zoom-in" onmousemove="zoomFollow(event, this)" onmouseleave="zoomReset(this)">
+        <img src="images/product/main large image - productdetail.webp" alt="Rachi Workwear Jacket Main" class="w-full h-full object-cover group-hover:scale-150 transition-transform duration-300 ease-out origin-center">
       </div>
 
       <!-- 2x2 Image Grid -->
       <div class="grid grid-cols-2 gap-0">
-        <div class="aspect-square bg-gray-100 overflow-hidden mt-2 mr-1 mb-2 ">
-          <img src="images/product/section 2x2 Image Grid 1 -productdetail .webp" alt="Detail 1" class="w-full h-full object-cover">
+        <div class="aspect-square bg-gray-100 overflow-hidden mt-2 mr-1 mb-2 relative group cursor-zoom-in" onmousemove="zoomFollow(event, this)" onmouseleave="zoomReset(this)">
+          <img src="images/product/section 2x2 Image Grid 1 -productdetail .webp" alt="Detail 1" class="w-full h-full object-cover group-hover:scale-150 transition-transform duration-300 ease-out origin-center">
         </div>
-        <div class="aspect-square bg-gray-100 overflow-hidden mt-2 mb-2 ml-1 ">
-          <img src="images/product/section 2x2 Image Grid 2 -productdetail .webp.webp" alt="Detail 2" class="w-full h-full object-cover">
+        <div class="aspect-square bg-gray-100 overflow-hidden mt-2 mb-2 ml-1 relative group cursor-zoom-in" onmousemove="zoomFollow(event, this)" onmouseleave="zoomReset(this)">
+          <img src="images/product/section 2x2 Image Grid 2 -productdetail .webp.webp" alt="Detail 2" class="w-full h-full object-cover group-hover:scale-150 transition-transform duration-300 ease-out origin-center">
         </div>
-        <div class="aspect-square bg-gray-100 overflow-hidden mt-2 mb-2 mr-1 ">
-          <img src="images/product/section 2x2 Image Grid 3 -productdetail .webp.webp" alt="Detail 3" class="w-full h-full object-cover">
+        <div class="aspect-square bg-gray-100 overflow-hidden mt-2 mb-2 mr-1 relative group cursor-zoom-in" onmousemove="zoomFollow(event, this)" onmouseleave="zoomReset(this)">
+          <img src="images/product/section 2x2 Image Grid 3 -productdetail .webp.webp" alt="Detail 3" class="w-full h-full object-cover group-hover:scale-150 transition-transform duration-300 ease-out origin-center">
         </div>
-        <div class="aspect-square bg-gray-100 overflow-hidden mt-2 mb-2 ml-1 ">
-          <img src="images/product/section 2x2 Image Grid 4 -productdetail .webp.webp" alt="Detail 4" class="w-full h-full object-cover">
+        <div class="aspect-square bg-gray-100 overflow-hidden mt-2 mb-2 ml-1 relative group cursor-zoom-in" onmousemove="zoomFollow(event, this)" onmouseleave="zoomReset(this)">
+          <img src="images/product/section 2x2 Image Grid 4 -productdetail .webp.webp" alt="Detail 4" class="w-full h-full object-cover group-hover:scale-150 transition-transform duration-300 ease-out origin-center">
         </div>
       </div>
 
@@ -435,6 +435,20 @@
       let val = parseInt(input.value) + change;
       if (val < 1) val = 1;
       input.value = val;
+    }
+
+    // Zoom Follow functionality
+    function zoomFollow(event, container) {
+      const img = container.querySelector('img');
+      const rect = container.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      img.style.transformOrigin = `${x}% ${y}%`;
+    }
+
+    function zoomReset(container) {
+      const img = container.querySelector('img');
+      img.style.transformOrigin = 'center center';
     }
   </script>
 </body>
